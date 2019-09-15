@@ -1,0 +1,12 @@
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\bin\Debug\ManageIT.MedShop.exe.config
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\bin\Debug\ManageIT.MedShop.exe
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\bin\Debug\ManageIT.MedShop.pdb
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.Properties.Resources.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.csproj.GenerateResource.cache
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.csproj.CoreCompileInputs.cache
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.exe
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.pdb
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.csprojAssemblyReference.cache
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.Start.AdminFrame.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.Start.EmployFrame.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.Start.LoginForm.resources
