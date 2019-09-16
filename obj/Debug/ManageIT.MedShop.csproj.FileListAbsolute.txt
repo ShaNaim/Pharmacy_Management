@@ -10,3 +10,4 @@ D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.Start.AdminFrame.resources
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.Start.EmployFrame.resources
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.Start.LoginForm.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.Purchase.PurchaseMain.resources

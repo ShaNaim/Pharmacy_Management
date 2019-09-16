@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManageIT.MedShop.Utility;
 
 namespace ManageIT.MedShop.Start
 {
@@ -45,6 +46,25 @@ namespace ManageIT.MedShop.Start
             }
             return false;
         }
+        private void UserLogin()
+        {
+            if (checkUser())
+            {
+                if (txtUserName.Text == "Admin")
+                {
+                    AdminFrame adminFrame = new AdminFrame();
+                    this.Hide();
+                    adminFrame.Show();
+                }
+                else
+                {
+                    EmployFrame employFrame = new EmployFrame();
+                    this.Hide();
+                    employFrame.Show();
+                }
+
+            }
+        }
 
 
         ///////////////////////////////// Action Events /////////////////////////////////
@@ -63,22 +83,7 @@ namespace ManageIT.MedShop.Start
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if(checkUser())
-            {
-                if(txtUserName.Text == "Admin")
-                {
-                    AdminFrame adminFrame = new AdminFrame();
-                    this.Hide();
-                    adminFrame.Show();
-                }
-                else
-                {
-                    EmployFrame employFrame = new EmployFrame();
-                    this.Hide();
-                    employFrame.Show();
-                }
-                
-            }
+            UserLogin();
         }
 
         private void TxtUserName_TextChanged(object sender, EventArgs e)
@@ -87,6 +92,21 @@ namespace ManageIT.MedShop.Start
             {
                 lblError.Visible = false;
             }
+        }
+
+        private void TxtUserName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.FrameUtility.FocusOn(txtPassword, e);
+        }
+
+        private void TxtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.Equals((Char)Keys.Enter))
+            {
+                
+                UserLogin();
+            }
+            MessageBox.Show("OK");
         }
     }
 }

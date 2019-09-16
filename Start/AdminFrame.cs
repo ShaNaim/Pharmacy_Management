@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManageIT.MedShop.Purchase;
 
 namespace ManageIT.MedShop.Start
 {
@@ -41,6 +42,20 @@ namespace ManageIT.MedShop.Start
             LoginForm loginForm = new LoginForm();
             this.Hide();
             loginForm.Show();
+        }
+
+        private void DailyPurchaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PurchaseMain purchaseMain = new PurchaseMain();
+            purchaseMain.TopLevel = false;
+            purchaseMain.AutoScroll = true;
+            purchaseMain.FormBorderStyle = FormBorderStyle.None;
+            purchaseMain.Dock = DockStyle.Fill;
+
+            this.pnlDisplay.Controls.Clear();
+            this.pnlDisplay.Controls.Add(purchaseMain);
+
+            purchaseMain.Show();
         }
     }
 }

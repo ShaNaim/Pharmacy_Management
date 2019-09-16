@@ -109,13 +109,14 @@
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.btnLogout.Location = new System.Drawing.Point(1087, 0);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLogout.Location = new System.Drawing.Point(1082, 0);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(97, 36);
             this.btnLogout.TabIndex = 4;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click_1);
             // 
             // menustripEmploy
             // 

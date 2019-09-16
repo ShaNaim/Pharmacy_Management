@@ -17,7 +17,12 @@ namespace ManageIT.MedShop.Start
             InitializeComponent();
         }
 
+        ///////////////////////////////// Custom Method /////////////////////////////////
 
+
+
+
+        ///////////////////////////////// Action Events /////////////////////////////////
 
 
 
@@ -34,6 +39,13 @@ namespace ManageIT.MedShop.Start
         }
 
         private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            this.Hide();
+            loginForm.Show();
+        }
+
+        private void BtnLogout_Click_1(object sender, EventArgs e)
         {
             LoginForm loginForm = new LoginForm();
             this.Hide();
