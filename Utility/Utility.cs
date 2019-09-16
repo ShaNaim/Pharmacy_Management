@@ -9,14 +9,12 @@ namespace ManageIT.MedShop.Utility
 {
     public static class FrameUtility
     {
-        public static void FocusOn(TextBox focusBox , EventArgs key)
+        public static void FocusOn(TextBox focusBox , KeyPressEventArgs key)
         {
-            if(key.Equals((Char)Keys.Enter))
+            if(key.KeyChar.Equals((Char)Keys.Enter))
             {
                 focusBox.Focus();
             }
         }
-
-
     }
 }

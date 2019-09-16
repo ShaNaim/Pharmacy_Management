@@ -17,12 +17,35 @@ namespace ManageIT.MedShop.Start
         {
             InitializeComponent();
         }
-
         ///////////////////////////////// Custom Method /////////////////////////////////
+        private void LoadPurchaseMenu()
+        {
+            PurchaseMain purchaseMain = new PurchaseMain();
 
-       
+            purchaseMain.TopLevel = false;
+            purchaseMain.AutoScroll = true;
+            purchaseMain.FormBorderStyle = FormBorderStyle.None;
+            purchaseMain.Dock = DockStyle.Fill;
 
+            this.pnlDisplay.Controls.Clear();
+            this.pnlDisplay.Controls.Add(purchaseMain);
 
+            purchaseMain.Show();
+        }
+        private void LoadPurchaseNew()
+        {
+            PurchaseNew purchaseNew = new PurchaseNew();
+
+            purchaseNew.TopLevel = false;
+            purchaseNew.AutoScroll = true;
+            purchaseNew.FormBorderStyle = FormBorderStyle.None;
+            purchaseNew.Dock = DockStyle.Fill;
+
+            this.pnlDisplay.Controls.Clear();
+            this.pnlDisplay.Controls.Add(purchaseNew);
+
+            purchaseNew.Show();
+        }
         ///////////////////////////////// Action Events /////////////////////////////////
 
         private void BtnLogout_MouseEnter(object sender, EventArgs e)
@@ -46,16 +69,12 @@ namespace ManageIT.MedShop.Start
 
         private void DailyPurchaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PurchaseMain purchaseMain = new PurchaseMain();
-            purchaseMain.TopLevel = false;
-            purchaseMain.AutoScroll = true;
-            purchaseMain.FormBorderStyle = FormBorderStyle.None;
-            purchaseMain.Dock = DockStyle.Fill;
+            LoadPurchaseMenu();
+        }
 
-            this.pnlDisplay.Controls.Clear();
-            this.pnlDisplay.Controls.Add(purchaseMain);
-
-            purchaseMain.Show();
+        private void NewParchesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadPurchaseNew();
         }
     }
 }

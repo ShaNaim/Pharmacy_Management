@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManageIT.MedShop.Utility;
 
 namespace ManageIT.MedShop.Purchase
 {
-    public partial class PurchaseMain : Form
+    public partial class PurchaseNew : Form
     {
-        public PurchaseMain()
+        public PurchaseNew()
         {
             InitializeComponent();
         }
@@ -22,13 +23,9 @@ namespace ManageIT.MedShop.Purchase
         ///////////////////////////////// Action Events /////////////////////////////////
         private void TxtID_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtName, e);
         
-
-        private void TxtName_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtAmount, e);
+        private void TxtName_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtPrice, e);
         
+        private void TxtPrice_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtVender, e);
 
-        private void TxtAmount_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtVender, e);
-        
-
-        private void TxtVender_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtPrice, e);
     }
 }

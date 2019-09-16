@@ -94,19 +94,14 @@ namespace ManageIT.MedShop.Start
             }
         }
 
-        private void TxtUserName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Utility.FrameUtility.FocusOn(txtPassword, e);
-        }
+        private void TxtUserName_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtPassword, e);
 
         private void TxtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.Equals((Char)Keys.Enter))
+            if (e.KeyChar.Equals((char)Keys.Enter))
             {
-                
                 UserLogin();
             }
-            MessageBox.Show("OK");
         }
     }
 }

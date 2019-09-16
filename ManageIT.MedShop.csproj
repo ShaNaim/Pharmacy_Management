@@ -52,6 +52,12 @@
     <Compile Include="Purchase\PurchaseMain.Designer.cs">
       <DependentUpon>PurchaseMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase\PurchaseNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\PurchaseNew.Designer.cs">
+      <DependentUpon>PurchaseNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Start\AdminFrame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="Utility\Utility.cs" />
     <EmbeddedResource Include="Purchase\PurchaseMain.resx">
       <DependentUpon>PurchaseMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\PurchaseNew.resx">
+      <DependentUpon>PurchaseNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Start\AdminFrame.resx">
       <DependentUpon>AdminFrame.cs</DependentUpon>
