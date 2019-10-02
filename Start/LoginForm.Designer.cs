@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lblError = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -39,8 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCopyRight = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -53,7 +54,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblCopyRight, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
@@ -80,6 +81,20 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 351F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(484, 414);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 28.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.Image = global::ManageIT.MedShop.Properties.Resources.iconfinder_medical_healthcare_hospital_12_4082107;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(86, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(311, 46);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "    Shohan Pharmacy";
             // 
             // tableLayoutPanel3
             // 
@@ -208,32 +223,20 @@
             this.btnLogin.MouseEnter += new System.EventHandler(this.BtnLogin_MouseEnter);
             this.btnLogin.MouseLeave += new System.EventHandler(this.BtnLogin_MouseLeave);
             // 
-            // label4
+            // lblCopyRight
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label4.Location = new System.Drawing.Point(3, 543);
-            this.label4.Margin = new System.Windows.Forms.Padding(3, 0, 0, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 12);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "copyright ManageIT 2019";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 28.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.Image = global::ManageIT.MedShop.Properties.Resources.iconfinder_medical_healthcare_hospital_12_4082107;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(86, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 46);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "    Shohan Pharmacy";
+            this.lblCopyRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblCopyRight.AutoSize = true;
+            this.lblCopyRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F, System.Drawing.FontStyle.Bold);
+            this.lblCopyRight.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblCopyRight.Image = ((System.Drawing.Image)(resources.GetObject("lblCopyRight.Image")));
+            this.lblCopyRight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCopyRight.Location = new System.Drawing.Point(3, 542);
+            this.lblCopyRight.Margin = new System.Windows.Forms.Padding(3, 0, 0, 6);
+            this.lblCopyRight.Name = "lblCopyRight";
+            this.lblCopyRight.Size = new System.Drawing.Size(110, 13);
+            this.lblCopyRight.TabIndex = 1;
+            this.lblCopyRight.Text = "    ManageIT 2019";
             // 
             // LoginForm
             // 
@@ -278,6 +281,6 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblError;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCopyRight;
     }
 }

@@ -9,6 +9,7 @@ namespace ManageIT.MedShop.Utility
 {
     public static class FrameUtility
     {
+        public static string CopyRightText = "    ManageIT";
         public static void FocusOn(TextBox focusBox , KeyPressEventArgs key)
         {
             if(key.KeyChar.Equals((Char)Keys.Enter))

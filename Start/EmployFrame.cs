@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManageIT.MedShop.Purchase;
 
 namespace ManageIT.MedShop.Start
 {
@@ -15,10 +16,38 @@ namespace ManageIT.MedShop.Start
         public EmployFrame()
         {
             InitializeComponent();
+            lblCopyRight.Text = Utility.FrameUtility.CopyRightText;
         }
 
         ///////////////////////////////// Custom Method /////////////////////////////////
+        private void LoadPurchaseMenu()
+        {
+            PurchaseMain purchaseMain = new PurchaseMain();
 
+            purchaseMain.TopLevel = false;
+            purchaseMain.AutoScroll = true;
+            purchaseMain.FormBorderStyle = FormBorderStyle.None;
+            purchaseMain.Dock = DockStyle.Fill;
+
+            this.pnlDisplay.Controls.Clear();
+            this.pnlDisplay.Controls.Add(purchaseMain);
+
+            purchaseMain.Show();
+        }
+        private void LoadPurchaseNew()
+        {
+            PurchaseNew purchaseNew = new PurchaseNew();
+
+            purchaseNew.TopLevel = false;
+            purchaseNew.AutoScroll = true;
+            purchaseNew.FormBorderStyle = FormBorderStyle.None;
+            purchaseNew.Dock = DockStyle.Fill;
+
+            this.pnlDisplay.Controls.Clear();
+            this.pnlDisplay.Controls.Add(purchaseNew);
+
+            purchaseNew.Show();
+        }
 
 
 
@@ -50,6 +79,16 @@ namespace ManageIT.MedShop.Start
             LoginForm loginForm = new LoginForm();
             this.Hide();
             loginForm.Show();
+        }
+
+        private void DailyPurchaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadPurchaseMenu();
+        }
+
+        private void NewPurchaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadPurchaseNew();
         }
     }
 }

@@ -117,6 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblCopyRight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAP1JREFUOE+1kktOAkEQQAdYEBNCwhVwwQXc6gFYsJQt3MLIAcBDoKfwCLDTuNNj
+        8Am4YcF707QBpv0kwkteUt1d01NVM9m5aOEdPu00du9XqviAG1zhBKe43u2N0JwkHrzgDPtYwYixe56Z
+        k7zEN5vQzFdpPDPHSg6wP0v0LVLCe/zAN+xgxBxzD2bikOw5ln2LC7zGHjqDOoo5rn3mCyftwCJjfA5h
+        Xs0VXuSrgIN9DGHgpwukhuUQ5hQuOG6hi0u8Qdv5xAZKsoXUEAf4jq/YxkhyiPKXz3iJcyx8Rvn3jyQe
+        eLsl2qfD2v+Vh/jtw/vYn0Ny0mpc6PkEZNkWBPhAGsFZYWsAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="menustripEmploy.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 3</value>
   </metadata>

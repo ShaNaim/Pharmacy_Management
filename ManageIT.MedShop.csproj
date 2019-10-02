@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employ\AddNewEmploy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employ\AddNewEmploy.Designer.cs">
+      <DependentUpon>AddNewEmploy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employ\EmployInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employ\EmployInfo.Designer.cs">
+      <DependentUpon>EmployInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\PurchaseMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +91,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\Utility.cs" />
+    <EmbeddedResource Include="Employ\AddNewEmploy.resx">
+      <DependentUpon>AddNewEmploy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employ\EmployInfo.resx">
+      <DependentUpon>EmployInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\PurchaseMain.resx">
       <DependentUpon>PurchaseMain.cs</DependentUpon>
     </EmbeddedResource>

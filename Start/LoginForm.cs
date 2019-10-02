@@ -16,6 +16,8 @@ namespace ManageIT.MedShop.Start
         public LoginForm()
         {
             InitializeComponent();
+
+            lblCopyRight.Text = Utility.FrameUtility.CopyRightText;
         }
 
 

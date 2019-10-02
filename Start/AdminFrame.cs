@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManageIT.MedShop.Purchase;
+using ManageIT.MedShop.Employ;
 
 namespace ManageIT.MedShop.Start
 {
@@ -16,6 +17,7 @@ namespace ManageIT.MedShop.Start
         public AdminFrame()
         {
             InitializeComponent();
+            lblCopyRight.Text = Utility.FrameUtility.CopyRightText;
         }
         ///////////////////////////////// Custom Method /////////////////////////////////
         private void LoadPurchaseMenu()
@@ -46,6 +48,21 @@ namespace ManageIT.MedShop.Start
 
             purchaseNew.Show();
         }
+
+        private void LoadEmployAdd()
+        {
+            AddNewEmploy addNewEmploy = new AddNewEmploy();
+
+            addNewEmploy.TopLevel = false;
+            addNewEmploy.AutoScroll = true;
+            addNewEmploy.FormBorderStyle = FormBorderStyle.None;
+            addNewEmploy.Dock = DockStyle.Fill;
+
+            this.pnlDisplay.Controls.Clear();
+            this.pnlDisplay.Controls.Add(addNewEmploy);
+
+            addNewEmploy.Show();
+        }
         ///////////////////////////////// Action Events /////////////////////////////////
 
         private void BtnLogout_MouseEnter(object sender, EventArgs e)
@@ -75,6 +92,11 @@ namespace ManageIT.MedShop.Start
         private void NewParchesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoadPurchaseNew();
+        }
+
+        private void AddNewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadEmployAdd();
         }
     }
 }
