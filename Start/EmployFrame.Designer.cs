@@ -72,7 +72,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 285F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.875F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.125F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnLogout, 3, 0);
@@ -103,7 +103,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(792, 7);
+            this.label2.Location = new System.Drawing.Point(790, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(276, 22);
             this.label2.TabIndex = 3;
@@ -159,7 +159,7 @@
             this.dailyPurchaseToolStripMenuItem.BackColor = System.Drawing.Color.LightSalmon;
             this.dailyPurchaseToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
             this.dailyPurchaseToolStripMenuItem.Name = "dailyPurchaseToolStripMenuItem";
-            this.dailyPurchaseToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
+            this.dailyPurchaseToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.dailyPurchaseToolStripMenuItem.Text = "Daily Purchase";
             this.dailyPurchaseToolStripMenuItem.Click += new System.EventHandler(this.DailyPurchaseToolStripMenuItem_Click);
             // 
@@ -168,7 +168,7 @@
             this.newPurchaseToolStripMenuItem.BackColor = System.Drawing.Color.LightSalmon;
             this.newPurchaseToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
             this.newPurchaseToolStripMenuItem.Name = "newPurchaseToolStripMenuItem";
-            this.newPurchaseToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
+            this.newPurchaseToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.newPurchaseToolStripMenuItem.Text = "New Purchase";
             this.newPurchaseToolStripMenuItem.Click += new System.EventHandler(this.NewPurchaseToolStripMenuItem_Click);
             // 
@@ -177,6 +177,7 @@
             this.settingToolStripMenuItem1.Name = "settingToolStripMenuItem1";
             this.settingToolStripMenuItem1.Size = new System.Drawing.Size(88, 32);
             this.settingToolStripMenuItem1.Text = "Setting";
+            this.settingToolStripMenuItem1.Click += new System.EventHandler(this.SettingToolStripMenuItem1_Click);
             // 
             // pnlDisplay
             // 

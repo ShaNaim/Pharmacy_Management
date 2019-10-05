@@ -23,6 +23,11 @@ namespace ManageIT.MedShop.Employ
             InitializeComponent();
             this.EmployInfo = employInfo ;
             txtID.Text = EmployInfo.txtID.Text;
+            txtPassword.Text = EmployInfo.txtPassword.Text;
+            txtContact.Text = EmployInfo.txtContact.Text;
+            txtSalary.Text = EmployInfo.txtSalary.Text;
+            dtpJoinDate.Value = EmployInfo.dtpJoinDate.Value;
+            btnAdd.Text = "Update";
         }
 
         ///////////////////////////////// Custom Method /////////////////////////////////

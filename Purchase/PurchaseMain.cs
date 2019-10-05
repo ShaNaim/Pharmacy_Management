@@ -20,7 +20,7 @@ namespace ManageIT.MedShop.Purchase
         ///////////////////////////////// Custom Method /////////////////////////////////
 
         ///////////////////////////////// Action Events /////////////////////////////////
-        private void TxtID_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtName, e);
+        //private void TxtID_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtName, e);
         
 
         private void TxtName_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtAmount, e);

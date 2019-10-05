@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminFrame));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblCopyRight = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.menustripAdmin = new System.Windows.Forms.MenuStrip();
@@ -42,9 +44,9 @@
             this.addNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlDisplay = new System.Windows.Forms.Panel();
-            this.lblCopyRight = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.sellsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.menustripAdmin.SuspendLayout();
@@ -68,14 +70,29 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1184, 661);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // lblCopyRight
+            // 
+            this.lblCopyRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblCopyRight.AutoSize = true;
+            this.lblCopyRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F, System.Drawing.FontStyle.Bold);
+            this.lblCopyRight.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblCopyRight.Image = ((System.Drawing.Image)(resources.GetObject("lblCopyRight.Image")));
+            this.lblCopyRight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCopyRight.Location = new System.Drawing.Point(3, 642);
+            this.lblCopyRight.Margin = new System.Windows.Forms.Padding(3, 0, 0, 6);
+            this.lblCopyRight.Name = "lblCopyRight";
+            this.lblCopyRight.Size = new System.Drawing.Size(110, 13);
+            this.lblCopyRight.TabIndex = 3;
+            this.lblCopyRight.Text = "    ManageIT 2019";
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 347F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 424F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.49451F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.50549F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnLogout, 3, 0);
@@ -89,15 +106,28 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1184, 36);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 16.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.Image = global::ManageIT.MedShop.Properties.Resources.med24x24;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(505, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(192, 26);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "    Shohan Pharmacy";
+            // 
             // label2
             // 
             this.label2.AllowDrop = true;
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(784, 7);
+            this.label2.Location = new System.Drawing.Point(826, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(279, 22);
+            this.label2.Size = new System.Drawing.Size(234, 36);
             this.label2.TabIndex = 3;
             this.label2.Text = "Welcome : Md Babul Sardar Badol";
             // 
@@ -127,10 +157,11 @@
             this.homeToolStripMenuItem,
             this.purchesToolStripMenuItem,
             this.employToolStripMenuItem,
-            this.sellsToolStripMenuItem});
+            this.sellsToolStripMenuItem,
+            this.settingToolStripMenuItem});
             this.menustripAdmin.Location = new System.Drawing.Point(0, 0);
             this.menustripAdmin.Name = "menustripAdmin";
-            this.menustripAdmin.Size = new System.Drawing.Size(347, 36);
+            this.menustripAdmin.Size = new System.Drawing.Size(424, 36);
             this.menustripAdmin.TabIndex = 5;
             this.menustripAdmin.Text = "menuStrip1";
             // 
@@ -181,7 +212,7 @@
             this.addNewToolStripMenuItem.BackColor = System.Drawing.Color.LightSalmon;
             this.addNewToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
             this.addNewToolStripMenuItem.Name = "addNewToolStripMenuItem";
-            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.addNewToolStripMenuItem.Text = "Add New";
             this.addNewToolStripMenuItem.Click += new System.EventHandler(this.AddNewToolStripMenuItem_Click);
             // 
@@ -190,14 +221,24 @@
             this.employesToolStripMenuItem.BackColor = System.Drawing.Color.LightSalmon;
             this.employesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
             this.employesToolStripMenuItem.Name = "employesToolStripMenuItem";
-            this.employesToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.employesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.employesToolStripMenuItem.Text = "Employes";
+            this.employesToolStripMenuItem.Click += new System.EventHandler(this.EmployesToolStripMenuItem_Click);
             // 
             // sellsToolStripMenuItem
             // 
+            this.sellsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sellsToolStripMenuItem1});
             this.sellsToolStripMenuItem.Name = "sellsToolStripMenuItem";
             this.sellsToolStripMenuItem.Size = new System.Drawing.Size(63, 32);
             this.sellsToolStripMenuItem.Text = "Sells";
+            // 
+            // settingToolStripMenuItem
+            // 
+            this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(88, 32);
+            this.settingToolStripMenuItem.Text = "Setting";
+            this.settingToolStripMenuItem.Click += new System.EventHandler(this.SettingToolStripMenuItem_Click);
             // 
             // pnlDisplay
             // 
@@ -208,33 +249,14 @@
             this.pnlDisplay.Size = new System.Drawing.Size(1184, 605);
             this.pnlDisplay.TabIndex = 2;
             // 
-            // lblCopyRight
+            // sellsToolStripMenuItem1
             // 
-            this.lblCopyRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblCopyRight.AutoSize = true;
-            this.lblCopyRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F, System.Drawing.FontStyle.Bold);
-            this.lblCopyRight.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblCopyRight.Image = ((System.Drawing.Image)(resources.GetObject("lblCopyRight.Image")));
-            this.lblCopyRight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCopyRight.Location = new System.Drawing.Point(3, 642);
-            this.lblCopyRight.Margin = new System.Windows.Forms.Padding(3, 0, 0, 6);
-            this.lblCopyRight.Name = "lblCopyRight";
-            this.lblCopyRight.Size = new System.Drawing.Size(110, 13);
-            this.lblCopyRight.TabIndex = 3;
-            this.lblCopyRight.Text = "    ManageIT 2019";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 16.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.Image = global::ManageIT.MedShop.Properties.Resources.med24x24;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(450, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 26);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "    Shohan Pharmacy";
+            this.sellsToolStripMenuItem1.BackColor = System.Drawing.Color.LightSalmon;
+            this.sellsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
+            this.sellsToolStripMenuItem1.Name = "sellsToolStripMenuItem1";
+            this.sellsToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.sellsToolStripMenuItem1.Text = "Sells";
+            this.sellsToolStripMenuItem1.Click += new System.EventHandler(this.SellsToolStripMenuItem1_Click);
             // 
             // AdminFrame
             // 
@@ -274,5 +296,7 @@
         private System.Windows.Forms.ToolStripMenuItem addNewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employesToolStripMenuItem;
         private System.Windows.Forms.Label lblCopyRight;
+        private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sellsToolStripMenuItem1;
     }
 }

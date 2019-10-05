@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManageIT.MedShop.Purchase;
+using ManageIT.MedShop.Employ; 
 
 namespace ManageIT.MedShop.Start
 {
@@ -49,7 +50,20 @@ namespace ManageIT.MedShop.Start
             purchaseNew.Show();
         }
 
+        private void LoadSetting()
+        {
+            Setting setting = new Setting();
 
+            setting.TopLevel = false;
+            setting.AutoScroll = true;
+            setting.FormBorderStyle = FormBorderStyle.None;
+            setting.Dock = DockStyle.Fill;
+
+            this.pnlDisplay.Controls.Clear();
+            this.pnlDisplay.Controls.Add(setting);
+
+            setting.Show();
+        }
 
         ///////////////////////////////// Action Events /////////////////////////////////
 
@@ -89,6 +103,11 @@ namespace ManageIT.MedShop.Start
         private void NewPurchaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoadPurchaseNew();
+        }
+
+        private void SettingToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            LoadSetting();
         }
     }
 }

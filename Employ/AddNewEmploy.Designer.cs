@@ -28,27 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblID = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtContact = new System.Windows.Forms.TextBox();
             this.txtSalary = new System.Windows.Forms.TextBox();
+            this.dtpJoinDate = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dtpJoinDate = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvEmploy = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
@@ -117,6 +119,7 @@
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.15464F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.84536F));
+            this.tableLayoutPanel4.Controls.Add(this.label8, 0, 7);
             this.tableLayoutPanel4.Controls.Add(this.label5, 0, 6);
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 5);
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 4);
@@ -129,12 +132,14 @@
             this.tableLayoutPanel4.Controls.Add(this.txtContact, 1, 4);
             this.tableLayoutPanel4.Controls.Add(this.txtSalary, 1, 5);
             this.tableLayoutPanel4.Controls.Add(this.dtpJoinDate, 1, 6);
+            this.tableLayoutPanel4.Controls.Add(this.comboBox1, 1, 7);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 28);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 8;
+            this.tableLayoutPanel4.RowCount = 9;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -145,45 +150,45 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(513, 312);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // lblID
+            // label8
             // 
-            this.lblID.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblID.Location = new System.Drawing.Point(85, 44);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(41, 24);
-            this.lblID.TabIndex = 2;
-            this.lblID.Text = "ID :";
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(48, 264);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 24);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Status :";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(17, 224);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 24);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Join Date :";
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(47, 204);
+            this.label1.Location = new System.Drawing.Point(47, 184);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 24);
             this.label1.TabIndex = 3;
             this.label1.Text = "Salary :";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(14, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 24);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Passowrd :";
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(34, 164);
+            this.label3.Location = new System.Drawing.Point(34, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 24);
             this.label3.TabIndex = 5;
@@ -194,28 +199,39 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(49, 124);
+            this.label4.Location = new System.Drawing.Point(49, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 24);
             this.label4.TabIndex = 6;
             this.label4.Text = "Name :";
             // 
-            // label5
+            // label2
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(17, 244);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 24);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Join Date :";
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(14, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 24);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Passowrd :";
+            // 
+            // lblID
+            // 
+            this.lblID.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblID.Location = new System.Drawing.Point(85, 24);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(41, 24);
+            this.lblID.TabIndex = 2;
+            this.lblID.Text = "ID :";
             // 
             // txtID
             // 
             this.txtID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.txtID.Location = new System.Drawing.Point(132, 41);
+            this.txtID.Location = new System.Drawing.Point(132, 21);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(378, 32);
@@ -226,7 +242,7 @@
             // 
             this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.txtPassword.Location = new System.Drawing.Point(132, 81);
+            this.txtPassword.Location = new System.Drawing.Point(132, 61);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(378, 32);
@@ -237,7 +253,7 @@
             // 
             this.txtName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.txtName.Location = new System.Drawing.Point(132, 121);
+            this.txtName.Location = new System.Drawing.Point(132, 101);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(378, 32);
@@ -248,7 +264,7 @@
             // 
             this.txtContact.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.txtContact.Location = new System.Drawing.Point(132, 161);
+            this.txtContact.Location = new System.Drawing.Point(132, 141);
             this.txtContact.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(378, 32);
@@ -259,11 +275,32 @@
             // 
             this.txtSalary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.txtSalary.Location = new System.Drawing.Point(132, 201);
+            this.txtSalary.Location = new System.Drawing.Point(132, 181);
             this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(378, 32);
             this.txtSalary.TabIndex = 12;
+            // 
+            // dtpJoinDate
+            // 
+            this.dtpJoinDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtpJoinDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.dtpJoinDate.Location = new System.Drawing.Point(132, 219);
+            this.dtpJoinDate.Name = "dtpJoinDate";
+            this.dtpJoinDate.Size = new System.Drawing.Size(378, 32);
+            this.dtpJoinDate.TabIndex = 13;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Admin",
+            "Employ"});
+            this.comboBox1.Location = new System.Drawing.Point(132, 259);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(132, 34);
+            this.comboBox1.TabIndex = 16;
             // 
             // tableLayoutPanel9
             // 
@@ -328,15 +365,6 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // dtpJoinDate
-            // 
-            this.dtpJoinDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtpJoinDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.dtpJoinDate.Location = new System.Drawing.Point(132, 239);
-            this.dtpJoinDate.Name = "dtpJoinDate";
-            this.dtpJoinDate.Size = new System.Drawing.Size(378, 32);
-            this.dtpJoinDate.TabIndex = 13;
-            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
@@ -345,7 +373,7 @@
             this.tableLayoutPanel5.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(513, 0);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
@@ -356,12 +384,12 @@
             // 
             // dgvEmploy
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.MistyRose;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Cyan;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvEmploy.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MistyRose;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Cyan;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvEmploy.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEmploy.BackgroundColor = System.Drawing.Color.MistyRose;
             this.dgvEmploy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmploy.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -376,11 +404,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label6.Location = new System.Drawing.Point(133, 19);
+            this.label6.Location = new System.Drawing.Point(135, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 24);
+            this.label6.Size = new System.Drawing.Size(117, 24);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Employ Info";
+            this.label6.Text = "Employ List";
             // 
             // AddNewEmploy
             // 
@@ -430,5 +458,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.DataGridView dgvEmploy;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

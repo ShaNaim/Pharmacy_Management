@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManageIT.MedShop.Purchase;
 using ManageIT.MedShop.Employ;
+using ManageIT.MedShop.Sells;
 
 namespace ManageIT.MedShop.Start
 {
@@ -63,6 +64,51 @@ namespace ManageIT.MedShop.Start
 
             addNewEmploy.Show();
         }
+
+        private void LoadEmployInfo()
+        {
+            EmployInfo employInfo = new EmployInfo();
+
+            employInfo.TopLevel = false;
+            employInfo.AutoScroll = true;
+            employInfo.FormBorderStyle = FormBorderStyle.None;
+            employInfo.Dock = DockStyle.Fill;
+
+            this.pnlDisplay.Controls.Clear();
+            this.pnlDisplay.Controls.Add(employInfo);
+
+            employInfo.Show();
+        }
+
+        private void LoadSetting()
+        {
+            Setting setting = new Setting();
+
+            setting.TopLevel = false;
+            setting.AutoScroll = true;
+            setting.FormBorderStyle = FormBorderStyle.None;
+            setting.Dock = DockStyle.Fill;
+
+            this.pnlDisplay.Controls.Clear();
+            this.pnlDisplay.Controls.Add(setting);
+
+            setting.Show();
+        }
+
+        private void LoadSellsMain()
+        {
+            SellsMain sellsMain = new SellsMain();
+
+            sellsMain.TopLevel = false;
+            sellsMain.AutoScroll = true;
+            sellsMain.FormBorderStyle = FormBorderStyle.None;
+            sellsMain.Dock = DockStyle.Fill;
+
+            this.pnlDisplay.Controls.Clear();
+            this.pnlDisplay.Controls.Add(sellsMain);
+
+            sellsMain.Show();
+        }
         ///////////////////////////////// Action Events /////////////////////////////////
 
         private void BtnLogout_MouseEnter(object sender, EventArgs e)
@@ -84,19 +130,16 @@ namespace ManageIT.MedShop.Start
             loginForm.Show();
         }
 
-        private void DailyPurchaseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LoadPurchaseMenu();
-        }
+        private void DailyPurchaseToolStripMenuItem_Click(object sender, EventArgs e) => LoadPurchaseMenu();
 
-        private void NewParchesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LoadPurchaseNew();
-        }
+        private void NewParchesToolStripMenuItem_Click(object sender, EventArgs e) => LoadPurchaseNew();
 
-        private void AddNewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LoadEmployAdd();
-        }
+        private void AddNewToolStripMenuItem_Click(object sender, EventArgs e) => LoadEmployAdd();
+
+        private void EmployesToolStripMenuItem_Click(object sender, EventArgs e) => LoadEmployInfo();
+
+        private void SettingToolStripMenuItem_Click(object sender, EventArgs e) => LoadSetting();
+
+        private void SellsToolStripMenuItem1_Click(object sender, EventArgs e) => LoadSellsMain();
     }
 }
