@@ -109,7 +109,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Cyan;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvEmployPurchaseInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvEmployPurchaseInfo.BackgroundColor = System.Drawing.Color.MistyRose;
+            this.dgvEmployPurchaseInfo.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.dgvEmployPurchaseInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployPurchaseInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEmployPurchaseInfo.Location = new System.Drawing.Point(3, 65);
@@ -174,7 +174,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Cyan;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvEmployInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvEmployInfo.BackgroundColor = System.Drawing.Color.MistyRose;
+            this.dgvEmployInfo.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.dgvEmployInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEmployInfo.Location = new System.Drawing.Point(3, 76);
@@ -401,8 +401,8 @@
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.05208F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.94792F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.10026F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.89974F));
             this.tableLayoutPanel7.Controls.Add(this.txtStatus, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(117, 272);
@@ -422,7 +422,7 @@
             this.txtStatus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(169, 32);
+            this.txtStatus.Size = new System.Drawing.Size(185, 32);
             this.txtStatus.TabIndex = 13;
             // 
             // tableLayoutPanel9

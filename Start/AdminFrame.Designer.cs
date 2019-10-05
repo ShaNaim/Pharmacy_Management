@@ -90,8 +90,8 @@
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 424F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.49451F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.50549F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.90297F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.09703F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
@@ -113,11 +113,11 @@
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 16.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.Image = global::ManageIT.MedShop.Properties.Resources.med24x24;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(505, 5);
+            this.label1.Location = new System.Drawing.Point(458, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 26);
+            this.label1.Size = new System.Drawing.Size(301, 26);
             this.label1.TabIndex = 2;
-            this.label1.Text = "    Shohan Pharmacy";
+            this.label1.Text = "    Welcome To Shohan Pharmacy";
             // 
             // label2
             // 
@@ -125,11 +125,11 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(826, 0);
+            this.label2.Location = new System.Drawing.Point(867, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(234, 36);
+            this.label2.Size = new System.Drawing.Size(193, 22);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Welcome : Md Babul Sardar Badol";
+            this.label2.Text = "Md Babul Sardar Badol";
             // 
             // btnLogout
             // 
