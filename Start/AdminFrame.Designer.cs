@@ -44,9 +44,10 @@
             this.addNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sellsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlDisplay = new System.Windows.Forms.Panel();
-            this.sellsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.venderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.menustripAdmin.SuspendLayout();
@@ -92,7 +93,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 424F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.90297F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.09703F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnLogout, 3, 0);
@@ -125,7 +126,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(867, 7);
+            this.label2.Location = new System.Drawing.Point(866, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(193, 22);
             this.label2.TabIndex = 3;
@@ -185,7 +186,7 @@
             this.dailyPurchaseToolStripMenuItem.BackColor = System.Drawing.Color.LightSalmon;
             this.dailyPurchaseToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
             this.dailyPurchaseToolStripMenuItem.Name = "dailyPurchaseToolStripMenuItem";
-            this.dailyPurchaseToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
+            this.dailyPurchaseToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.dailyPurchaseToolStripMenuItem.Text = "Daily Purchase";
             this.dailyPurchaseToolStripMenuItem.Click += new System.EventHandler(this.DailyPurchaseToolStripMenuItem_Click);
             // 
@@ -194,7 +195,7 @@
             this.newParchesToolStripMenuItem.BackColor = System.Drawing.Color.LightSalmon;
             this.newParchesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
             this.newParchesToolStripMenuItem.Name = "newParchesToolStripMenuItem";
-            this.newParchesToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
+            this.newParchesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.newParchesToolStripMenuItem.Text = "New Parches";
             this.newParchesToolStripMenuItem.Click += new System.EventHandler(this.NewParchesToolStripMenuItem_Click);
             // 
@@ -228,10 +229,20 @@
             // sellsToolStripMenuItem
             // 
             this.sellsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sellsToolStripMenuItem1});
+            this.sellsToolStripMenuItem1,
+            this.venderToolStripMenuItem});
             this.sellsToolStripMenuItem.Name = "sellsToolStripMenuItem";
             this.sellsToolStripMenuItem.Size = new System.Drawing.Size(63, 32);
             this.sellsToolStripMenuItem.Text = "Sells";
+            // 
+            // sellsToolStripMenuItem1
+            // 
+            this.sellsToolStripMenuItem1.BackColor = System.Drawing.Color.LightSalmon;
+            this.sellsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
+            this.sellsToolStripMenuItem1.Name = "sellsToolStripMenuItem1";
+            this.sellsToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.sellsToolStripMenuItem1.Text = "Sells";
+            this.sellsToolStripMenuItem1.Click += new System.EventHandler(this.SellsToolStripMenuItem1_Click);
             // 
             // settingToolStripMenuItem
             // 
@@ -249,14 +260,13 @@
             this.pnlDisplay.Size = new System.Drawing.Size(1184, 605);
             this.pnlDisplay.TabIndex = 2;
             // 
-            // sellsToolStripMenuItem1
+            // venderToolStripMenuItem
             // 
-            this.sellsToolStripMenuItem1.BackColor = System.Drawing.Color.LightSalmon;
-            this.sellsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
-            this.sellsToolStripMenuItem1.Name = "sellsToolStripMenuItem1";
-            this.sellsToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
-            this.sellsToolStripMenuItem1.Text = "Sells";
-            this.sellsToolStripMenuItem1.Click += new System.EventHandler(this.SellsToolStripMenuItem1_Click);
+            this.venderToolStripMenuItem.BackColor = System.Drawing.Color.LightSalmon;
+            this.venderToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
+            this.venderToolStripMenuItem.Name = "venderToolStripMenuItem";
+            this.venderToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.venderToolStripMenuItem.Text = "Vender";
             // 
             // AdminFrame
             // 
@@ -298,5 +308,6 @@
         private System.Windows.Forms.Label lblCopyRight;
         private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sellsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem venderToolStripMenuItem;
     }
 }
