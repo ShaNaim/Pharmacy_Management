@@ -1,0 +1,12 @@
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\ManageIT.MedShop\ManageIT.MedShop.View.Employee.AddNewEmploy.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\ManageIT.MedShop\ManageIT.MedShop.View.Employee.EmployInfo.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\ManageIT.MedShop\ManageIT.MedShop.View.Employee.Setting.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\ManageIT.MedShop\ManageIT.MedShop.View.Purchase.PurchaseMain.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\ManageIT.MedShop\ManageIT.MedShop.View.Purchase.PurchaseNew.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\ManageIT.MedShop\ManageIT.MedShop.View.Sells.SellsMain.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\ManageIT.MedShop\ManageIT.MedShop.View.Start.AdminFrame.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\ManageIT.MedShop\ManageIT.MedShop.View.Start.EmployFrame.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\ManageIT.MedShop\ManageIT.MedShop.View.Start.LoginForm.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\ManageIT.MedShop\ManageIT.MedShop.Properties.Resources.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\ManageIT.MedShop\ManageIT.MedShop.View.Vender.Vender.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\ManageIT.MedShop\ManageIT.MedShop.csproj.GenerateResource.cache

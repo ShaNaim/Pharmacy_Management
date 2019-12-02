@@ -35,13 +35,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ManageIT.MedShop|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ManageIT.MedShop\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -58,130 +63,94 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeeTable.cs">
-      <DependentUpon>PharmacyModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Employ\AddNewEmploy.cs">
+    <Compile Include="View\Employee\AddNewEmploy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employ\AddNewEmploy.Designer.cs">
+    <Compile Include="View\Employee\AddNewEmploy.Designer.cs">
       <DependentUpon>AddNewEmploy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employ\EmployInfo.cs">
+    <Compile Include="View\Employee\EmployInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employ\EmployInfo.Designer.cs">
+    <Compile Include="View\Employee\EmployInfo.Designer.cs">
       <DependentUpon>EmployInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employ\Setting.cs">
+    <Compile Include="View\Employee\Setting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employ\Setting.Designer.cs">
+    <Compile Include="View\Employee\Setting.Designer.cs">
       <DependentUpon>Setting.cs</DependentUpon>
     </Compile>
-    <Compile Include="PharmacyModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PharmacyModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PharmacyModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PharmacyModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PharmacyModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PharmacyModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="ProductDetail.cs">
-      <DependentUpon>PharmacyModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProductTable.cs">
-      <DependentUpon>PharmacyModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Purchase\PurchaseMain.cs">
+    <Compile Include="View\Purchase\PurchaseMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Purchase\PurchaseMain.Designer.cs">
+    <Compile Include="View\Purchase\PurchaseMain.Designer.cs">
       <DependentUpon>PurchaseMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchase\PurchaseNew.cs">
+    <Compile Include="View\Purchase\PurchaseNew.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Purchase\PurchaseNew.Designer.cs">
+    <Compile Include="View\Purchase\PurchaseNew.Designer.cs">
       <DependentUpon>PurchaseNew.cs</DependentUpon>
     </Compile>
-    <Compile Include="SellsTable.cs">
-      <DependentUpon>PharmacyModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Sells\SellsMain.cs">
+    <Compile Include="View\Sells\SellsMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sells\SellsMain.Designer.cs">
+    <Compile Include="View\Sells\SellsMain.Designer.cs">
       <DependentUpon>SellsMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Start\AdminFrame.cs">
+    <Compile Include="View\Start\AdminFrame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Start\AdminFrame.Designer.cs">
+    <Compile Include="View\Start\AdminFrame.Designer.cs">
       <DependentUpon>AdminFrame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Start\EmployFrame.cs">
+    <Compile Include="View\Start\EmployFrame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Start\EmployFrame.Designer.cs">
+    <Compile Include="View\Start\EmployFrame.Designer.cs">
       <DependentUpon>EmployFrame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Start\LoginForm.cs">
+    <Compile Include="View\Start\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Start\LoginForm.Designer.cs">
+    <Compile Include="View\Start\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>PharmacyModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UserTable.cs">
-      <DependentUpon>PharmacyModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Utility\Utility.cs" />
-    <Compile Include="VenderTable.cs">
-      <DependentUpon>PharmacyModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Vender\Vender.cs">
+    <Compile Include="View\Utility\Utility.cs" />
+    <Compile Include="View\Vender\Vender.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vender\Vender.Designer.cs">
+    <Compile Include="View\Vender\Vender.Designer.cs">
       <DependentUpon>Vender.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Employ\AddNewEmploy.resx">
+    <EmbeddedResource Include="View\Employee\AddNewEmploy.resx">
       <DependentUpon>AddNewEmploy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employ\EmployInfo.resx">
+    <EmbeddedResource Include="View\Employee\EmployInfo.resx">
       <DependentUpon>EmployInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employ\Setting.resx">
+    <EmbeddedResource Include="View\Employee\Setting.resx">
       <DependentUpon>Setting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purchase\PurchaseMain.resx">
+    <EmbeddedResource Include="View\Purchase\PurchaseMain.resx">
       <DependentUpon>PurchaseMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purchase\PurchaseNew.resx">
+    <EmbeddedResource Include="View\Purchase\PurchaseNew.resx">
       <DependentUpon>PurchaseNew.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sells\SellsMain.resx">
+    <EmbeddedResource Include="View\Sells\SellsMain.resx">
       <DependentUpon>SellsMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Start\AdminFrame.resx">
+    <EmbeddedResource Include="View\Start\AdminFrame.resx">
       <DependentUpon>AdminFrame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Start\EmployFrame.resx">
+    <EmbeddedResource Include="View\Start\EmployFrame.resx">
       <DependentUpon>EmployFrame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Start\LoginForm.resx">
+    <EmbeddedResource Include="View\Start\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -194,17 +163,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Vender\Vender.resx">
+    <EmbeddedResource Include="View\Vender\Vender.resx">
       <DependentUpon>Vender.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <EntityDeploy Include="PharmacyModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PharmacyModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="PharmacyModel.edmx.diagram">
-      <DependentUpon>PharmacyModel.edmx</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -226,18 +188,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\icons\med24x24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="PharmacyModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PharmacyModel.edmx</DependentUpon>
-      <LastGenOutput>PharmacyModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="PharmacyModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PharmacyModel.edmx</DependentUpon>
-      <LastGenOutput>PharmacyModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
