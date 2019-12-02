@@ -63,6 +63,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database.cs" />
+    <Compile Include="Model\DataBase.cs" />
+    <Compile Include="Model\DBConnection.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\Employees.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\Products.cs" />
+    <Compile Include="Model\Sell.cs" />
+    <Compile Include="Model\Sells.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\Users.cs" />
+    <Compile Include="Model\Vender.cs" />
+    <Compile Include="Model\Venders.cs" />
     <Compile Include="View\Employee\AddNewEmploy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +204,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

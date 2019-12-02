@@ -299,7 +299,7 @@
             "Employ"});
             this.comboBox1.Location = new System.Drawing.Point(132, 259);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 34);
+            this.comboBox1.Size = new System.Drawing.Size(121, 34);
             this.comboBox1.TabIndex = 16;
             // 
             // tableLayoutPanel9
