@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace AIUB.Shop_Management.Default
+namespace ManageIT.MedShop.Model
 {
     public static class DBConnection
     {
-        private static string connectionString = "Data Source=DESKTOP-3PAI8AC;Initial Catalog=SuperShopManagementSystem;Integrated Security=True";
-        private static SqlConnection _connection;
+        public static string connectionString = "Data Source = DESKTOP-3PAI8AC;Initial Catalog = ShohanPharmacy; Integrated Security = True";
+        
+        /*private static SqlConnection _connection;
         public static SqlConnection Connection
         {
             get
@@ -25,9 +26,10 @@ namespace AIUB.Shop_Management.Default
                 return _connection;
             }
 
-        }
+        }*/
+
         //for select query
-        public static DataSet GetDataSet(string query)
+        public static DataSet GetDataSet(string query,SqlConnection Connection)
         {
             SqlCommand command = new SqlCommand(query, Connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
@@ -38,22 +40,28 @@ namespace AIUB.Shop_Management.Default
         }
         public static DataTable GetDataTable(string query)
         {
-            DataSet ds = GetDataSet(query);
+            SqlConnection Connection = new SqlConnection(DBConnection.connectionString);
+            Connection.Open();
+            DataSet ds = GetDataSet(query,Connection);
             if (ds.Tables.Count > 0)
                 return ds.Tables[0];
             return null;
         }
         public static int ExecuteQuery(string query)
         {
+            SqlConnection Connection = new SqlConnection(DBConnection.connectionString);
+            Connection.Open();
             SqlCommand command = new SqlCommand(query, Connection);
-            return command.ExecuteNonQuery();
+            int result = command.ExecuteNonQuery();
+            Connection.Close();
+            return result;
         }
         public static SqlDataReader getReader(string query)
         {
             SqlConnection con = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand(query, con);
             con.Open();
-            SqlDataReader dataReader;
+            //SqlDataReader dataReader;
 
             return command.ExecuteReader();
         }

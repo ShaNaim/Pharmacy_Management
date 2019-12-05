@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -44,7 +45,6 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtVender = new System.Windows.Forms.TextBox();
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblVender = new System.Windows.Forms.Label();
@@ -55,6 +55,8 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.cbName = new System.Windows.Forms.ComboBox();
+            this.productTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shohanPharmacyDataSet1 = new ManageIT.MedShop.ShohanPharmacyDataSet1();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -65,7 +67,12 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.cbVender = new System.Windows.Forms.ComboBox();
+            this.venderTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shohanPharmacyDataSet = new ManageIT.MedShop.ShohanPharmacyDataSet();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.venderTableTableAdapter = new ManageIT.MedShop.ShohanPharmacyDataSetTableAdapters.VenderTableTableAdapter();
+            this.productTableTableAdapter = new ManageIT.MedShop.ShohanPharmacyDataSet1TableAdapters.ProductTableTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -75,11 +82,15 @@
             this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSet1)).BeginInit();
             this.tableLayoutPanel11.SuspendLayout();
             this.panel1.SuspendLayout();
             this.btngrpPayment.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.venderTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSet)).BeginInit();
             this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -289,7 +300,6 @@
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Controls.Add(this.txtVender, 1, 4);
             this.tableLayoutPanel7.Controls.Add(this.txtAmount, 1, 3);
             this.tableLayoutPanel7.Controls.Add(this.txtID, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.lblVender, 0, 4);
@@ -302,6 +312,7 @@
             this.tableLayoutPanel7.Controls.Add(this.cbName, 1, 2);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel11, 1, 5);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel9, 1, 8);
+            this.tableLayoutPanel7.Controls.Add(this.cbVender, 1, 4);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -319,18 +330,6 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(393, 455);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
-            // txtVender
-            // 
-            this.txtVender.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.txtVender.Location = new System.Drawing.Point(103, 212);
-            this.txtVender.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.txtVender.Name = "txtVender";
-            this.txtVender.Size = new System.Drawing.Size(287, 32);
-            this.txtVender.TabIndex = 8;
-            this.txtVender.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtVender_KeyPress);
-            // 
             // txtAmount
             // 
             this.txtAmount.BackColor = System.Drawing.SystemColors.Window;
@@ -341,7 +340,6 @@
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(287, 32);
             this.txtAmount.TabIndex = 7;
-            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAmount_KeyPress);
             // 
             // txtID
             // 
@@ -431,6 +429,7 @@
             // 
             // cbName
             // 
+            this.cbName.DataSource = this.productTableBindingSource;
             this.cbName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.cbName.FormattingEnabled = true;
@@ -438,6 +437,16 @@
             this.cbName.Name = "cbName";
             this.cbName.Size = new System.Drawing.Size(287, 34);
             this.cbName.TabIndex = 13;
+            // 
+            // productTableBindingSource
+            // 
+            this.productTableBindingSource.DataMember = "ProductTable";
+            this.productTableBindingSource.DataSource = this.shohanPharmacyDataSet1;
+            // 
+            // shohanPharmacyDataSet1
+            // 
+            this.shohanPharmacyDataSet1.DataSetName = "ShohanPharmacyDataSet1";
+            this.shohanPharmacyDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tableLayoutPanel11
             // 
@@ -479,6 +488,7 @@
             this.btngrpPayment.Controls.Add(this.rbtnUnpaid);
             this.btngrpPayment.Controls.Add(this.rbtnPaid);
             this.btngrpPayment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btngrpPayment.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btngrpPayment.Location = new System.Drawing.Point(0, 0);
             this.btngrpPayment.Name = "btngrpPayment";
             this.btngrpPayment.Size = new System.Drawing.Size(141, 34);
@@ -530,6 +540,7 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Controls.Add(this.btnRemove, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.btnAdd, 1, 0);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 44);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -569,6 +580,27 @@
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
             // 
+            // cbVender
+            // 
+            this.cbVender.DataSource = this.venderTableBindingSource;
+            this.cbVender.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.cbVender.FormattingEnabled = true;
+            this.cbVender.Location = new System.Drawing.Point(103, 210);
+            this.cbVender.Name = "cbVender";
+            this.cbVender.Size = new System.Drawing.Size(287, 34);
+            this.cbVender.TabIndex = 15;
+            // 
+            // venderTableBindingSource
+            // 
+            this.venderTableBindingSource.DataMember = "VenderTable";
+            this.venderTableBindingSource.DataSource = this.shohanPharmacyDataSet;
+            // 
+            // shohanPharmacyDataSet
+            // 
+            this.shohanPharmacyDataSet.DataSetName = "ShohanPharmacyDataSet";
+            this.shohanPharmacyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.ColumnCount = 3;
@@ -584,6 +616,14 @@
             this.tableLayoutPanel10.Size = new System.Drawing.Size(1184, 561);
             this.tableLayoutPanel10.TabIndex = 1;
             // 
+            // venderTableTableAdapter
+            // 
+            this.venderTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // productTableTableAdapter
+            // 
+            this.productTableTableAdapter.ClearBeforeFill = true;
+            // 
             // PurchaseMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -593,6 +633,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PurchaseMain";
             this.Text = "PurchaseMain";
+            this.Load += new System.EventHandler(this.PurchaseMain_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -605,6 +646,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSet1)).EndInit();
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -612,6 +655,8 @@
             this.btngrpPayment.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.venderTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSet)).EndInit();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -634,7 +679,6 @@
         private System.Windows.Forms.Label lblVender;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.TextBox txtAmount;
-        private System.Windows.Forms.TextBox txtVender;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
@@ -655,5 +699,12 @@
         private System.Windows.Forms.GroupBox btngrpPayment;
         private System.Windows.Forms.RadioButton rbtnUnpaid;
         private System.Windows.Forms.RadioButton rbtnPaid;
+        private System.Windows.Forms.ComboBox cbVender;
+        private ShohanPharmacyDataSet shohanPharmacyDataSet;
+        private System.Windows.Forms.BindingSource venderTableBindingSource;
+        private ShohanPharmacyDataSetTableAdapters.VenderTableTableAdapter venderTableTableAdapter;
+        private ShohanPharmacyDataSet1 shohanPharmacyDataSet1;
+        private System.Windows.Forms.BindingSource productTableBindingSource;
+        private ShohanPharmacyDataSet1TableAdapters.ProductTableTableAdapter productTableTableAdapter;
     }
 }

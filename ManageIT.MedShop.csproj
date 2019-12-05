@@ -63,19 +63,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database.cs" />
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\UsersController.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="Departments.cs" />
+    <Compile Include="Model\Purchase.cs" />
+    <Compile Include="Model\Purchases.cs" />
+    <Compile Include="Model\Quater.cs" />
     <Compile Include="Model\DataBase.cs" />
     <Compile Include="Model\DBConnection.cs" />
-    <Compile Include="Model\Employee.cs" />
-    <Compile Include="Model\Employees.cs" />
+    <Compile Include="Model\Quaters.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\Users.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Products.cs" />
     <Compile Include="Model\Sell.cs" />
     <Compile Include="Model\Sells.cs" />
-    <Compile Include="Model\User.cs" />
-    <Compile Include="Model\Users.cs" />
+    <Compile Include="Model\Login.cs" />
+    <Compile Include="Model\Logins.cs" />
     <Compile Include="Model\Vender.cs" />
     <Compile Include="Model\Venders.cs" />
+    <Compile Include="ShohanPharmacyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShohanPharmacyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShohanPharmacyDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShohanPharmacyDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShohanPharmacyDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShohanPharmacyDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\CodeUtility.cs" />
     <Compile Include="View\Employee\AddNewEmploy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,7 +155,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\Utility\Utility.cs" />
+    <Compile Include="Utility\FramesUtility.cs" />
     <Compile Include="View\Vender\Vender.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +212,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ShohanPharmacyDataSet.xsc">
+      <DependentUpon>ShohanPharmacyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ShohanPharmacyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShohanPharmacyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShohanPharmacyDataSet.xss">
+      <DependentUpon>ShohanPharmacyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ShohanPharmacyDataSet1.xsc">
+      <DependentUpon>ShohanPharmacyDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ShohanPharmacyDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShohanPharmacyDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShohanPharmacyDataSet1.xss">
+      <DependentUpon>ShohanPharmacyDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ShohanPharmacyDataSet2.xsc">
+      <DependentUpon>ShohanPharmacyDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ShohanPharmacyDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShohanPharmacyDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShohanPharmacyDataSet2.xss">
+      <DependentUpon>ShohanPharmacyDataSet2.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -205,9 +261,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

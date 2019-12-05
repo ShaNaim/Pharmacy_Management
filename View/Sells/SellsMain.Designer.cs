@@ -38,7 +38,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.dgvSellsLeft = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblError = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,7 +58,12 @@
             this.cbName = new System.Windows.Forms.ComboBox();
             this.txtVender = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtProfit = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
+            this.lblSold = new System.Windows.Forms.Label();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtAmountSold = new System.Windows.Forms.TextBox();
+            this.lblError = new System.Windows.Forms.Label();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -73,6 +77,7 @@
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel10
@@ -189,9 +194,9 @@
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.57123F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.42877F));
-            this.tableLayoutPanel4.Controls.Add(this.lblError, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel7, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lblError, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(361, 20);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
@@ -201,20 +206,6 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.680584F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(763, 521);
             this.tableLayoutPanel4.TabIndex = 1;
-            // 
-            // lblError
-            // 
-            this.lblError.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(124, 491);
-            this.lblError.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(175, 24);
-            this.lblError.TabIndex = 6;
-            this.lblError.Text = "Unknown Product";
-            this.lblError.Visible = false;
             // 
             // tableLayoutPanel6
             // 
@@ -291,6 +282,8 @@
             this.tableLayoutPanel7.Controls.Add(this.cbName, 1, 2);
             this.tableLayoutPanel7.Controls.Add(this.txtVender, 1, 4);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel5, 1, 5);
+            this.tableLayoutPanel7.Controls.Add(this.lblSold, 0, 6);
+            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel12, 1, 6);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -321,6 +314,7 @@
             // txtID
             // 
             this.txtID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.txtID.Location = new System.Drawing.Point(103, 125);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
@@ -476,6 +470,7 @@
             // txtVender
             // 
             this.txtVender.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtVender.Enabled = false;
             this.txtVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.txtVender.Location = new System.Drawing.Point(103, 248);
             this.txtVender.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
@@ -487,28 +482,96 @@
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.14815F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.85185F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.txtProfit, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.txtPrice, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(100, 284);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(324, 41);
             this.tableLayoutPanel5.TabIndex = 15;
             // 
+            // txtProfit
+            // 
+            this.txtProfit.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.txtProfit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtProfit.Enabled = false;
+            this.txtProfit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.txtProfit.Location = new System.Drawing.Point(165, 5);
+            this.txtProfit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.txtProfit.Name = "txtProfit";
+            this.txtProfit.ReadOnly = true;
+            this.txtProfit.Size = new System.Drawing.Size(156, 32);
+            this.txtProfit.TabIndex = 13;
+            // 
             // txtPrice
             // 
+            this.txtPrice.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPrice.Enabled = false;
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.txtPrice.Location = new System.Drawing.Point(3, 5);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ReadOnly = true;
-            this.txtPrice.Size = new System.Drawing.Size(150, 32);
+            this.txtPrice.Size = new System.Drawing.Size(156, 32);
             this.txtPrice.TabIndex = 12;
+            // 
+            // lblSold
+            // 
+            this.lblSold.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblSold.AutoSize = true;
+            this.lblSold.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblSold.Location = new System.Drawing.Point(33, 333);
+            this.lblSold.Name = "lblSold";
+            this.lblSold.Size = new System.Drawing.Size(64, 24);
+            this.lblSold.TabIndex = 16;
+            this.lblSold.Text = "Sold :";
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 2;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.Controls.Add(this.txtAmountSold, 0, 0);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(100, 325);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 1;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(324, 41);
+            this.tableLayoutPanel12.TabIndex = 18;
+            // 
+            // txtAmountSold
+            // 
+            this.txtAmountSold.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAmountSold.Enabled = false;
+            this.txtAmountSold.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.txtAmountSold.Location = new System.Drawing.Point(3, 5);
+            this.txtAmountSold.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.txtAmountSold.Name = "txtAmountSold";
+            this.txtAmountSold.ReadOnly = true;
+            this.txtAmountSold.Size = new System.Drawing.Size(156, 32);
+            this.txtAmountSold.TabIndex = 13;
+            // 
+            // lblError
+            // 
+            this.lblError.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(124, 491);
+            this.lblError.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(175, 24);
+            this.lblError.TabIndex = 6;
+            this.lblError.Text = "Unknown Product";
+            this.lblError.Visible = false;
             // 
             // SellsMain
             // 
@@ -538,6 +601,8 @@
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -574,5 +639,9 @@
         private System.Windows.Forms.TextBox txtVender;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TextBox txtProfit;
+        private System.Windows.Forms.Label lblSold;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.TextBox txtAmountSold;
     }
 }

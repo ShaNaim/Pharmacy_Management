@@ -153,9 +153,9 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.txtPassword.Location = new System.Drawing.Point(155, 17);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(326, 25);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPassword_KeyPress);
             // 
             // label3
@@ -188,11 +188,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 18);
+            this.label2.Location = new System.Drawing.Point(59, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 24);
+            this.label2.Size = new System.Drawing.Size(90, 24);
             this.label2.TabIndex = 0;
-            this.label2.Text = "User Name :";
+            this.label2.Text = "User ID :";
             // 
             // txtUserName
             // 

@@ -5,7 +5,6 @@ D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.csproj.GenerateResource.cache
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.exe
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.pdb
-D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.csprojAssemblyReference.cache
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.View.Employee.AddNewEmploy.resources
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.View.Employee.EmployInfo.resources
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.View.Employee.Setting.resources

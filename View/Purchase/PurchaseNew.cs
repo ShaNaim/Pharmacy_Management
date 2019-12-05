@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ManageIT.MedShop.View.Utility;
+using ManageIT.MedShop.Utility;
 
 namespace ManageIT.MedShop.View.Purchase
 {
@@ -20,8 +20,15 @@ namespace ManageIT.MedShop.View.Purchase
         ///////////////////////////////// Custom Method /////////////////////////////////
 
         ///////////////////////////////// Action Events /////////////////////////////////
-        private void TxtID_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtName, e);
-        private void TxtName_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtPrice, e);
-        private void TxtPrice_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtVender, e);
+        private void TxtID_KeyPress(object sender, KeyPressEventArgs e) => Utility.FramesUtility.FocusOn(txtName, e);
+        private void TxtName_KeyPress(object sender, KeyPressEventArgs e) => Utility.FramesUtility.FocusOn(txtTottal, e);
+        private void TxtPrice_KeyPress(object sender, KeyPressEventArgs e) => Utility.FramesUtility.FocusOn(txtVender, e);
+
+        private void PurchaseNew_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'shohanPharmacyDataSet2.ProductTable' table. You can move, or remove it, as needed.
+            this.productTableTableAdapter.Fill(this.shohanPharmacyDataSet2.ProductTable);
+
+        }
     }
 }

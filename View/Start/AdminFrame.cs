@@ -18,7 +18,7 @@ namespace ManageIT.MedShop.View.Start
         public AdminFrame()
         {
             InitializeComponent();
-            lblCopyRight.Text = Utility.FrameUtility.CopyRightText;
+            lblCopyRight.Text = Utility.FramesUtility.CopyRightText;
         }
         ///////////////////////////////// Custom Method /////////////////////////////////
         private void LoadPurchaseMenu()

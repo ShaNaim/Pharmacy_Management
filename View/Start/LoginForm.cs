@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ManageIT.MedShop.View.Utility;
+using ManageIT.MedShop.Utility;
 
 namespace ManageIT.MedShop.View.Start
 {
@@ -17,14 +17,21 @@ namespace ManageIT.MedShop.View.Start
         {
             InitializeComponent();
 
-            lblCopyRight.Text = Utility.FrameUtility.CopyRightText;
+            lblCopyRight.Text = Utility.FramesUtility.CopyRightText;
         }
 
 
         ///////////////////////////////// Custom Method /////////////////////////////////
         
+        private void clear()
+        {
+            txtPassword.Text = "";
+            txtUserName.Text = "";
+            lblError.Visible = true;
+        }
         private bool checkUser()
         {
+           
             if(txtUserName.Text == "Admin" || txtUserName.Text == "Emp")
             {
                 if(txtPassword.Text == "admin" || txtPassword.Text == "emp")
@@ -33,17 +40,13 @@ namespace ManageIT.MedShop.View.Start
                 }
                 else
                 {
-                    txtPassword.Text = "";
-                    txtUserName.Text = "";
-                    lblError.Visible = true ;
+                    clear();
                     lblError.Text = "Incorrect Password";
                 }
             }
             else
             {
-                txtPassword.Text = "";
-                txtUserName.Text = "";
-                lblError.Visible = true;
+                clear();
                 lblError.Text = "Incorrect Username";
             }
             return false;
@@ -96,7 +99,7 @@ namespace ManageIT.MedShop.View.Start
             }
         }
 
-        private void TxtUserName_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtPassword, e);
+        private void TxtUserName_KeyPress(object sender, KeyPressEventArgs e) => Utility.FramesUtility.FocusOn(txtPassword, e);
 
         private void TxtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {

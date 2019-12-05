@@ -10,5 +10,8 @@ namespace ManageIT.MedShop.Model
     {
         public string ID { get; set; }
         public string Name { get; set; }
+        public string Contact { get; set; }
+        public string Company { get; set; }
+
     }
 }
