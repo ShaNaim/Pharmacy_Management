@@ -14,10 +14,11 @@ namespace ManageIT.MedShop.View.Start
 {
     public partial class EmployFrame : Form
     {
-        public EmployFrame()
+        public EmployFrame(string userName)
         {
             InitializeComponent();
             lblCopyRight.Text = Utility.FramesUtility.CopyRightText;
+            lblUserName.Text = "Welcome : " + userName ;
         }
 
         ///////////////////////////////// Custom Method /////////////////////////////////

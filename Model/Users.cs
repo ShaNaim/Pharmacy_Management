@@ -37,10 +37,40 @@ namespace ManageIT.MedShop.Model
             ArrayList a = new ArrayList();
             return a;
         }
-        public User getUser(User user)
+        public User getUser(int userId)
         {
-            User user1 = new User();
-            return user1;
+            string query = "SELECT * FROM Users WHERE UserId = '" + userId + "'; ";
+            try
+            {
+                SqlDataReader reader = DBConnection.getReader(query);
+
+                while (reader.Read())
+                {
+                    User user = new User()
+                    {
+
+                        Id = reader.GetInt32(reader.GetOrdinal("UserId")),
+                        Name = reader.GetString(reader.GetOrdinal("Name")),
+                        Contact = reader.GetInt32(reader.GetOrdinal("Contact")),
+                        Salary = (float)reader.GetDouble(reader.GetOrdinal("Salary")),
+                        JoidDate = reader.GetDateTime(reader.GetOrdinal("JoinDate"))
+
+                    };
+                    if (user != null)
+                    {
+                        return user;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            return null;
         }
     }
 }

@@ -28,12 +28,10 @@ namespace ManageIT.MedShop.Controller
         {
             return db.Users.getAllUser();
 
-        }
-        public static User getUser(string s)
-        {
-            return db.Users.getUser(user);
-        }
-
         }*/
+        public static User getUser(int uid)
+        {
+            return db.Users.getUser(uid);
+        }
     }
 }

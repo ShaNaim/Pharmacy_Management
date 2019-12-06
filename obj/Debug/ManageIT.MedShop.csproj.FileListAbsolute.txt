@@ -15,3 +15,4 @@ D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.View.Start.EmployFrame.resources
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.View.Start.LoginForm.resources
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.View.Vender.Vender.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.csprojAssemblyReference.cache

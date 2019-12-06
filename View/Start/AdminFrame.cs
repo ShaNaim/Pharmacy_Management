@@ -15,10 +15,11 @@ namespace ManageIT.MedShop.View.Start
 {
     public partial class AdminFrame : Form
     {
-        public AdminFrame()
+        public AdminFrame(string userName)
         {
             InitializeComponent();
             lblCopyRight.Text = Utility.FramesUtility.CopyRightText;
+            lblUserName.Text = "Welcome : " + userName;
         }
         ///////////////////////////////// Custom Method /////////////////////////////////
         private void LoadPurchaseMenu()

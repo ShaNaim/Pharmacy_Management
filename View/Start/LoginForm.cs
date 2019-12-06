@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManageIT.MedShop.Utility;
+using ManageIT.MedShop.Controller;
+using ManageIT.MedShop.Model;
 
 namespace ManageIT.MedShop.View.Start
 {
@@ -26,52 +28,65 @@ namespace ManageIT.MedShop.View.Start
         private void clear()
         {
             txtPassword.Text = "";
-            txtUserName.Text = "";
+            txtUserID.Text = "";
             lblError.Visible = true;
         }
-        private bool checkUser()
+        private bool authenticateInput()
         {
-           
-            if(txtUserName.Text == "Admin" || txtUserName.Text == "Emp")
+            int userId = 0;
+            string password = txtPassword.Text;
+            try
             {
-                if(txtPassword.Text == "admin" || txtPassword.Text == "emp")
+                userId = Int32.Parse(txtUserID.Text);
+                if (password != "")
                 {
                     return true;
                 }
                 else
                 {
-                    clear();
-                    lblError.Text = "Incorrect Password";
+                    MessageBox.Show("Incorrect Password", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
+             }
+            catch (Exception)
             {
-                clear();
-                lblError.Text = "Incorrect Username";
+
+                MessageBox.Show("Incorrect User ID", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return false;
         }
-        private void UserLogin()
+
+
+        private void authenticateUser()
         {
-            if (checkUser())
+            if(authenticateInput())
             {
-                if (txtUserName.Text == "Admin")
+                Login login = LoginController.authenticateUser(Int32.Parse(txtUserID.Text), txtPassword.Text);
+                if(login != null)
                 {
-                    AdminFrame adminFrame = new AdminFrame();
-                    this.Hide();
-                    adminFrame.Show();
+                    if (login.UserStatus == (int)CodeUtility.UserStatus.Admin)
+                    {
+                        AdminFrame adminFrame = new AdminFrame(UsersController.getUser(Int32.Parse(txtUserID.Text)).Name);
+                        adminFrame.Show();
+                        this.Hide();
+                    }
+                    else if (login.UserStatus == (int)CodeUtility.UserStatus.Employ)
+                    {
+                        EmployFrame employFrame = new EmployFrame(UsersController.getUser(Int32.Parse(txtUserID.Text)).Name);
+                        employFrame.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid User", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    EmployFrame employFrame = new EmployFrame();
-                    this.Hide();
-                    employFrame.Show();
+                    MessageBox.Show("Invalid User", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
+
         }
-
-
         ///////////////////////////////// Action Events /////////////////////////////////
 
         private void BtnLogin_MouseEnter(object sender, EventArgs e)
@@ -88,12 +103,12 @@ namespace ManageIT.MedShop.View.Start
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            UserLogin();
+            authenticateUser();
         }
 
         private void TxtUserName_TextChanged(object sender, EventArgs e)
         {
-            if(txtUserName.Text != "")
+            if(txtUserID.Text != "")
             {
                 lblError.Visible = false;
             }
@@ -105,7 +120,7 @@ namespace ManageIT.MedShop.View.Start
         {
             if (e.KeyChar.Equals((char)Keys.Enter))
             {
-                UserLogin();
+                authenticateUser();
             }
         }
     }

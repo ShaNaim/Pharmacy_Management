@@ -17,7 +17,7 @@ namespace ManageIT.MedShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminFrame());
+            Application.Run(new LoginForm());
         }
     }
 }
