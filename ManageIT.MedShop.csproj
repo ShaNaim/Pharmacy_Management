@@ -47,9 +47,14 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Bunufu Cracked\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -64,9 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\ProductController.cs" />
     <Compile Include="Controller\UsersController.cs" />
-    <Compile Include="Department.cs" />
-    <Compile Include="Departments.cs" />
+    <Compile Include="Controller\VenderController.cs" />
     <Compile Include="Model\Purchase.cs" />
     <Compile Include="Model\Purchases.cs" />
     <Compile Include="Model\Quater.cs" />

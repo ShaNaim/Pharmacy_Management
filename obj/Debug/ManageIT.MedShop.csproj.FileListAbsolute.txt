@@ -15,4 +15,6 @@ D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.View.Start.EmployFrame.resources
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.View.Start.LoginForm.resources
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.View.Vender.Vender.resources
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.csproj.CopyComplete
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.csprojAssemblyReference.cache

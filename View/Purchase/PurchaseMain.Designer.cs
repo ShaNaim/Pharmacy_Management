@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -43,7 +42,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnDone = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.dgvProduct = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -51,12 +50,9 @@
             this.lblAmount = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.cbName = new System.Windows.Forms.ComboBox();
-            this.productTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.shohanPharmacyDataSet1 = new ManageIT.MedShop.ShohanPharmacyDataSet1();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -67,12 +63,10 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.cbVender = new System.Windows.Forms.ComboBox();
-            this.venderTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.shohanPharmacyDataSet = new ManageIT.MedShop.ShohanPharmacyDataSet();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtVender = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.venderTableTableAdapter = new ManageIT.MedShop.ShohanPharmacyDataSetTableAdapters.VenderTableTableAdapter();
-            this.productTableTableAdapter = new ManageIT.MedShop.ShohanPharmacyDataSet1TableAdapters.ProductTableTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -82,15 +76,12 @@
             this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSet1)).BeginInit();
             this.tableLayoutPanel11.SuspendLayout();
             this.panel1.SuspendLayout();
             this.btngrpPayment.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.venderTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSet)).BeginInit();
+            this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,22 +159,17 @@
             this.txtSearchMed.Name = "txtSearchMed";
             this.txtSearchMed.Size = new System.Drawing.Size(308, 32);
             this.txtSearchMed.TabIndex = 0;
+            this.txtSearchMed.TextChanged += new System.EventHandler(this.txtSearchMed_TextChanged);
             // 
             // dgvSearchView
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MistyRose;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Cyan;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvSearchView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvSearchView.BackgroundColor = System.Drawing.Color.MistyRose;
             this.dgvSearchView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSearchView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSearchView.Location = new System.Drawing.Point(3, 54);
             this.dgvSearchView.Name = "dgvSearchView";
             this.dgvSearchView.Size = new System.Drawing.Size(308, 423);
-            this.dgvSearchView.TabIndex = 1;
+            this.dgvSearchView.TabIndex = 5;
+            this.dgvSearchView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearchView_CellClick);
             // 
             // tableLayoutPanel4
             // 
@@ -281,19 +267,31 @@
             // 
             // dgvProduct
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MistyRose;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Cyan;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProduct.BackgroundColor = System.Drawing.Color.MistyRose;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProduct.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProduct.DoubleBuffered = true;
+            this.dgvProduct.EnableHeadersVisualStyles = false;
+            this.dgvProduct.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dgvProduct.HeaderForeColor = System.Drawing.Color.SeaGreen;
             this.dgvProduct.Location = new System.Drawing.Point(3, 3);
             this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvProduct.Size = new System.Drawing.Size(378, 444);
-            this.dgvProduct.TabIndex = 2;
+            this.dgvProduct.TabIndex = 0;
+            this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             // 
             // tableLayoutPanel7
             // 
@@ -306,13 +304,13 @@
             this.tableLayoutPanel7.Controls.Add(this.lblAmount, 0, 3);
             this.tableLayoutPanel7.Controls.Add(this.lblName, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.lblID, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.dateTimePicker1, 1, 6);
+            this.tableLayoutPanel7.Controls.Add(this.dtpPurchaseDate, 1, 6);
             this.tableLayoutPanel7.Controls.Add(this.lblDate, 0, 6);
             this.tableLayoutPanel7.Controls.Add(this.lblPrice, 0, 5);
-            this.tableLayoutPanel7.Controls.Add(this.cbName, 1, 2);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel11, 1, 5);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel9, 1, 8);
-            this.tableLayoutPanel7.Controls.Add(this.cbVender, 1, 4);
+            this.tableLayoutPanel7.Controls.Add(this.txtName, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel12, 1, 4);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -395,14 +393,14 @@
             this.lblID.TabIndex = 1;
             this.lblID.Text = "ID :";
             // 
-            // dateTimePicker1
+            // dtpPurchaseDate
             // 
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(103, 290);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(287, 29);
-            this.dateTimePicker1.TabIndex = 9;
+            this.dtpPurchaseDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtpPurchaseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.dtpPurchaseDate.Location = new System.Drawing.Point(103, 290);
+            this.dtpPurchaseDate.Name = "dtpPurchaseDate";
+            this.dtpPurchaseDate.Size = new System.Drawing.Size(287, 29);
+            this.dtpPurchaseDate.TabIndex = 9;
             // 
             // lblDate
             // 
@@ -426,27 +424,6 @@
             this.lblPrice.Size = new System.Drawing.Size(70, 24);
             this.lblPrice.TabIndex = 11;
             this.lblPrice.Text = "Price :";
-            // 
-            // cbName
-            // 
-            this.cbName.DataSource = this.productTableBindingSource;
-            this.cbName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.cbName.FormattingEnabled = true;
-            this.cbName.Location = new System.Drawing.Point(103, 130);
-            this.cbName.Name = "cbName";
-            this.cbName.Size = new System.Drawing.Size(287, 34);
-            this.cbName.TabIndex = 13;
-            // 
-            // productTableBindingSource
-            // 
-            this.productTableBindingSource.DataMember = "ProductTable";
-            this.productTableBindingSource.DataSource = this.shohanPharmacyDataSet1;
-            // 
-            // shohanPharmacyDataSet1
-            // 
-            this.shohanPharmacyDataSet1.DataSetName = "ShohanPharmacyDataSet1";
-            this.shohanPharmacyDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tableLayoutPanel11
             // 
@@ -580,26 +557,40 @@
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
             // 
-            // cbVender
+            // txtName
             // 
-            this.cbVender.DataSource = this.venderTableBindingSource;
-            this.cbVender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.cbVender.FormattingEnabled = true;
-            this.cbVender.Location = new System.Drawing.Point(103, 210);
-            this.cbVender.Name = "cbVender";
-            this.cbVender.Size = new System.Drawing.Size(287, 34);
-            this.cbVender.TabIndex = 15;
+            this.txtName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.txtName.Location = new System.Drawing.Point(103, 132);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(287, 32);
+            this.txtName.TabIndex = 16;
             // 
-            // venderTableBindingSource
+            // tableLayoutPanel12
             // 
-            this.venderTableBindingSource.DataMember = "VenderTable";
-            this.venderTableBindingSource.DataSource = this.shohanPharmacyDataSet;
+            this.tableLayoutPanel12.ColumnCount = 2;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56F));
+            this.tableLayoutPanel12.Controls.Add(this.txtVender, 0, 0);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(100, 207);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 1;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(293, 40);
+            this.tableLayoutPanel12.TabIndex = 17;
             // 
-            // shohanPharmacyDataSet
+            // txtVender
             // 
-            this.shohanPharmacyDataSet.DataSetName = "ShohanPharmacyDataSet";
-            this.shohanPharmacyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.txtVender.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.txtVender.Location = new System.Drawing.Point(3, 5);
+            this.txtVender.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.txtVender.Name = "txtVender";
+            this.txtVender.Size = new System.Drawing.Size(231, 32);
+            this.txtVender.TabIndex = 13;
             // 
             // tableLayoutPanel10
             // 
@@ -615,14 +606,6 @@
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(1184, 561);
             this.tableLayoutPanel10.TabIndex = 1;
-            // 
-            // venderTableTableAdapter
-            // 
-            this.venderTableTableAdapter.ClearBeforeFill = true;
-            // 
-            // productTableTableAdapter
-            // 
-            this.productTableTableAdapter.ClearBeforeFill = true;
             // 
             // PurchaseMain
             // 
@@ -646,8 +629,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSet1)).EndInit();
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -655,8 +636,8 @@
             this.btngrpPayment.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.venderTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSet)).EndInit();
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel12.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -668,7 +649,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TextBox txtSearchMed;
-        private System.Windows.Forms.DataGridView dgvSearchView;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
@@ -684,8 +664,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnDone;
-        private System.Windows.Forms.DataGridView dgvProduct;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpPurchaseDate;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Button btnRemove;
@@ -693,18 +672,15 @@
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.ComboBox cbName;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox btngrpPayment;
         private System.Windows.Forms.RadioButton rbtnUnpaid;
         private System.Windows.Forms.RadioButton rbtnPaid;
-        private System.Windows.Forms.ComboBox cbVender;
-        private ShohanPharmacyDataSet shohanPharmacyDataSet;
-        private System.Windows.Forms.BindingSource venderTableBindingSource;
-        private ShohanPharmacyDataSetTableAdapters.VenderTableTableAdapter venderTableTableAdapter;
-        private ShohanPharmacyDataSet1 shohanPharmacyDataSet1;
-        private System.Windows.Forms.BindingSource productTableBindingSource;
-        private ShohanPharmacyDataSet1TableAdapters.ProductTableTableAdapter productTableTableAdapter;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvProduct;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.TextBox txtVender;
+        private System.Windows.Forms.DataGridView dgvSearchView;
     }
 }

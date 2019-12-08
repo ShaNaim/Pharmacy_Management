@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManageIT.MedShop.View.Start;
+using ManageIT.MedShop.View.Purchase;
 
 namespace ManageIT.MedShop
 {
@@ -17,7 +18,7 @@ namespace ManageIT.MedShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new PurchaseMain());
         }
     }
 }
