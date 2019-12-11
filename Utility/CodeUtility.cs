@@ -11,7 +11,7 @@ namespace ManageIT.MedShop.Utility
         public enum UserStatus
         {
             Admin = 1,
-            Employ = 2,
+            Employee = 2,
             Helper = 0
         }
         public enum loginStatus

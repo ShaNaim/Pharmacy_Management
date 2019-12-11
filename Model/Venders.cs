@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace ManageIT.MedShop.Model
 {
@@ -60,16 +61,99 @@ namespace ManageIT.MedShop.Model
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }
             return null;
         }
-        public void getAllVender()
+        public Vender getVenderbyName(string name)
         {
+            string query = "SELECT * FROM VenderTable WHERE Name = '" + name + "'; ";
+            try
+            {
+                SqlDataReader reader = DBConnection.getReader(query);
 
+                while (reader.Read())
+                {
+                    Vender vender = new Vender()
+                    {
+
+                        ID = reader.GetInt32(reader.GetOrdinal("VenderId")),
+                        Name = reader.GetString(reader.GetOrdinal("Name")),
+                        Contact = reader.GetString(reader.GetOrdinal("Contact")),
+                        Company = reader.GetString(reader.GetOrdinal("Company"))
+
+                    };
+                    if (vender != null)
+                    {
+                        return vender;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return null;
         }
-            
+        public ArrayList getAllVender()
+        {
+            ArrayList result = new ArrayList();
+            string query = "SELECT * FROM VenderTable ;";
+            try
+            {
+                SqlDataReader reader = DBConnection.getReader(query);
+                while (reader.Read())
+                {
+                    Vender vender = new Vender()
+                    {
+
+                        ID = reader.GetInt32(reader.GetOrdinal("VenderId")),
+                        Name = reader.GetString(reader.GetOrdinal("Name")),
+                        Contact = reader.GetString(reader.GetOrdinal("Contact")),
+                        Company = reader.GetString(reader.GetOrdinal("Company"))
+
+                    };
+                    result.Add(vender);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            if (result != null)
+            {
+                return result;
+            }
+            return null;
+        }
+        public ArrayList getAllVenderName()
+        {
+            ArrayList result = new ArrayList();
+            string query = "SELECT Name FROM VenderTable ;";
+            try
+            {
+                SqlDataReader reader = DBConnection.getReader(query);
+
+                while (reader.Read())
+                {
+                    result.Add(reader.GetString(reader.GetOrdinal("Name")));
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            if (result != null)
+            {
+                return result;
+            }
+            return null;
+        }
     }
 }

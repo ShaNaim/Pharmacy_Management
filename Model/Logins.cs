@@ -39,17 +39,14 @@ namespace ManageIT.MedShop.Model
                 {
                     loginUser = new Login()
                     {
-
                         UserId = reader.GetInt32(reader.GetOrdinal("UserId")),
                         UserPassword = reader.GetString(reader.GetOrdinal("Password")),
                         UserStatus = reader.GetInt32(reader.GetOrdinal("Status"))
-
                     };
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
                 throw;
             }
             if (loginUser.UserId == user.UserId)
@@ -69,7 +66,6 @@ namespace ManageIT.MedShop.Model
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

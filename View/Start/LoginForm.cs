@@ -69,7 +69,7 @@ namespace ManageIT.MedShop.View.Start
                         adminFrame.Show();
                         this.Hide();
                     }
-                    else if (login.UserStatus == (int)CodeUtility.UserStatus.Employ)
+                    else if (login.UserStatus == (int)CodeUtility.UserStatus.Employee)
                     {
                         EmployFrame employFrame = new EmployFrame(UsersController.getUser(Int32.Parse(txtUserID.Text)).Name);
                         employFrame.Show();

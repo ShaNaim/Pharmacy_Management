@@ -14,34 +14,22 @@ namespace ManageIT.MedShop.View.Purchase
 {
     public partial class PurchaseMain : Form
     {
-        private string did;
         public PurchaseMain()
         {
             InitializeComponent();
         }
-
         ///////////////////////////////// Custom Method /////////////////////////////////
-        public ArrayList searchProduct(string productName)
+        private ArrayList searchProduct(string productName)
         {
-            return ProductController.searchFor(productName);
+            return SearchController.searchForProduct(productName);
         }
         ///////////////////////////////// Action Events /////////////////////////////////
-        //private void TxtID_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(txtName, e);
-
-
         private void TxtName_KeyPress(object sender, KeyPressEventArgs e) => Utility.FramesUtility.FocusOn(txtAmount, e);
-
-
-        //private void TxtAmount_KeyPress(object sender, KeyPressEventArgs e) => Utility.FrameUtility.FocusOn(cbVender, e);
-
-
         private void TxtVender_KeyPress(object sender, KeyPressEventArgs e) => Utility.FramesUtility.FocusOn(txtPrice, e);
-
         private void PurchaseMain_Load(object sender, EventArgs e)
         {
 
         }
-
         private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dgvProduct.Rows[e.RowIndex].Selected = true;
@@ -52,7 +40,6 @@ namespace ManageIT.MedShop.View.Purchase
             txtPrice.Text = dgvProduct.Rows[e.RowIndex].Cells["Price"].Value.ToString();
             dtpPurchaseDate.Value = DateTime.Parse(dgvProduct.Rows[e.RowIndex].Cells["PurchaseDate"].Value.ToString());
         }
-
         private void txtSearchMed_TextChanged(object sender, EventArgs e)
         {
             if(txtSearchMed.Text != "")
@@ -76,7 +63,6 @@ namespace ManageIT.MedShop.View.Purchase
                 dgvSearchView.DataSource = "";
             }
         }
-
         private void dgvSearchView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dgvSearchView.Rows[e.RowIndex].Selected = true;

@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblError = new System.Windows.Forms.Label();
             this.txtTottal = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -40,44 +43,38 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblError = new System.Windows.Forms.Label();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlUpdate = new System.Windows.Forms.TableLayoutPanel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.pnlAdd = new System.Windows.Forms.TableLayoutPanel();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtVender = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnVenderDetails = new System.Windows.Forms.Button();
+            this.cbVender = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.venderIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountLeftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.shohanPharmacyDataSet2 = new ManageIT.MedShop.ShohanPharmacyDataSet2();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.shohanPharmacyDataSet = new ManageIT.MedShop.ShohanPharmacyDataSet();
-            this.shohanPharmacyDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productTableTableAdapter = new ManageIT.MedShop.ShohanPharmacyDataSet2TableAdapters.ProductTableTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
+            this.pnlUpdate.SuspendLayout();
+            this.pnlAdd.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSet2)).BeginInit();
+            this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.46619F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.53381F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.13726F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.86274F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -96,6 +93,7 @@
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Controls.Add(this.lblError, 1, 6);
             this.tableLayoutPanel7.Controls.Add(this.txtTottal, 1, 3);
             this.tableLayoutPanel7.Controls.Add(this.txtName, 1, 2);
             this.tableLayoutPanel7.Controls.Add(this.txtID, 1, 1);
@@ -105,7 +103,7 @@
             this.tableLayoutPanel7.Controls.Add(this.label1, 0, 4);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel9, 1, 5);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel4, 1, 4);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 82);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(44, 82);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 7;
@@ -119,6 +117,20 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(504, 377);
             this.tableLayoutPanel7.TabIndex = 4;
             // 
+            // lblError
+            // 
+            this.lblError.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(231, 340);
+            this.lblError.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(142, 24);
+            this.lblError.TabIndex = 6;
+            this.lblError.Text = "Must be Filled";
+            this.lblError.Visible = false;
+            // 
             // txtTottal
             // 
             this.txtTottal.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -128,7 +140,6 @@
             this.txtTottal.Name = "txtTottal";
             this.txtTottal.Size = new System.Drawing.Size(398, 32);
             this.txtTottal.TabIndex = 7;
-            this.txtTottal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPrice_KeyPress);
             // 
             // txtName
             // 
@@ -144,6 +155,7 @@
             // txtID
             // 
             this.txtID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
             this.txtID.Location = new System.Drawing.Point(103, 28);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
@@ -200,8 +212,8 @@
             // 
             this.tableLayoutPanel9.ColumnCount = 1;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Controls.Add(this.lblError, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel8, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.pnlUpdate, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.pnlAdd, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(100, 223);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
@@ -212,179 +224,246 @@
             this.tableLayoutPanel9.Size = new System.Drawing.Size(404, 100);
             this.tableLayoutPanel9.TabIndex = 10;
             // 
-            // lblError
+            // pnlUpdate
             // 
-            this.lblError.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(131, 65);
-            this.lblError.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(142, 24);
-            this.lblError.TabIndex = 6;
-            this.lblError.Text = "Must be Filled";
-            this.lblError.Visible = false;
+            this.pnlUpdate.ColumnCount = 2;
+            this.pnlUpdate.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlUpdate.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlUpdate.Controls.Add(this.btnRemove, 1, 0);
+            this.pnlUpdate.Controls.Add(this.btnUpdate, 0, 0);
+            this.pnlUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlUpdate.Location = new System.Drawing.Point(0, 50);
+            this.pnlUpdate.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlUpdate.Name = "pnlUpdate";
+            this.pnlUpdate.RowCount = 1;
+            this.pnlUpdate.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlUpdate.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.pnlUpdate.Size = new System.Drawing.Size(404, 50);
+            this.pnlUpdate.TabIndex = 3;
             // 
-            // tableLayoutPanel8
+            // btnCancel
             // 
-            this.tableLayoutPanel8.ColumnCount = 2;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.btnRemove, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.btnAdd, 1, 0);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(404, 50);
-            this.tableLayoutPanel8.TabIndex = 2;
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnCancel.BackColor = System.Drawing.Color.IndianRed;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCancel.Location = new System.Drawing.Point(208, 6);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 37);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnUpdate.BackColor = System.Drawing.Color.DarkSalmon;
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdate.Location = new System.Drawing.Point(99, 6);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 37);
+            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // pnlAdd
+            // 
+            this.pnlAdd.ColumnCount = 2;
+            this.pnlAdd.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlAdd.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlAdd.Controls.Add(this.btnCancel, 1, 0);
+            this.pnlAdd.Controls.Add(this.btnAdd, 0, 0);
+            this.pnlAdd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAdd.Location = new System.Drawing.Point(0, 0);
+            this.pnlAdd.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlAdd.Name = "pnlAdd";
+            this.pnlAdd.RowCount = 1;
+            this.pnlAdd.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlAdd.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.pnlAdd.Size = new System.Drawing.Size(404, 50);
+            this.pnlAdd.TabIndex = 2;
             // 
             // btnRemove
             // 
-            this.btnRemove.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnRemove.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnRemove.BackColor = System.Drawing.Color.IndianRed;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.btnRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRemove.Location = new System.Drawing.Point(96, 6);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btnRemove.Location = new System.Drawing.Point(208, 6);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(100, 37);
             this.btnRemove.TabIndex = 4;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(107)))), ((int)(((byte)(36)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.Location = new System.Drawing.Point(208, 6);
+            this.btnAdd.Location = new System.Drawing.Point(99, 6);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 37);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.46231F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.537688F));
-            this.tableLayoutPanel4.Controls.Add(this.txtVender, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.37688F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.62312F));
+            this.tableLayoutPanel4.Controls.Add(this.btnVenderDetails, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.cbVender, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(103, 176);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(100, 173);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(398, 44);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(404, 50);
             this.tableLayoutPanel4.TabIndex = 13;
             // 
-            // txtVender
+            // btnVenderDetails
             // 
-            this.txtVender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.txtVender.Location = new System.Drawing.Point(3, 5);
-            this.txtVender.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.txtVender.Name = "txtVender";
-            this.txtVender.Size = new System.Drawing.Size(361, 32);
-            this.txtVender.TabIndex = 12;
+            this.btnVenderDetails.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVenderDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVenderDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnVenderDetails.Location = new System.Drawing.Point(304, 0);
+            this.btnVenderDetails.Margin = new System.Windows.Forms.Padding(0);
+            this.btnVenderDetails.Name = "btnVenderDetails";
+            this.btnVenderDetails.Size = new System.Drawing.Size(100, 50);
+            this.btnVenderDetails.TabIndex = 13;
+            this.btnVenderDetails.Text = "Details";
+            this.btnVenderDetails.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // cbVender
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(367, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 44);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "***";
-            this.button1.UseVisualStyleBackColor = false;
+            this.cbVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.cbVender.FormattingEnabled = true;
+            this.cbVender.Location = new System.Drawing.Point(3, 3);
+            this.cbVender.Name = "cbVender";
+            this.cbVender.Size = new System.Drawing.Size(298, 34);
+            this.cbVender.TabIndex = 14;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.dgvProduct, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dgvProduct, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(504, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(593, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(516, 542);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(427, 542);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // dgvProduct
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MistyRose;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Cyan;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProduct.AutoGenerateColumns = false;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.MistyRose;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.Cyan;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle33;
             this.dgvProduct.BackgroundColor = System.Drawing.Color.MistyRose;
+            this.dgvProduct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.productIdDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.venderIdDataGridViewTextBoxColumn,
-            this.amountLeftDataGridViewTextBoxColumn});
-            this.dgvProduct.DataSource = this.productTableBindingSource;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle35;
             this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProduct.Location = new System.Drawing.Point(3, 43);
+            this.dgvProduct.Location = new System.Drawing.Point(0, 55);
+            this.dgvProduct.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.dgvProduct.Name = "dgvProduct";
-            this.dgvProduct.Size = new System.Drawing.Size(510, 456);
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
+            this.dgvProduct.Size = new System.Drawing.Size(427, 467);
             this.dgvProduct.TabIndex = 2;
+            this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             // 
-            // productIdDataGridViewTextBoxColumn
+            // tableLayoutPanel5
             // 
-            this.productIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
-            this.productIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productIdDataGridViewTextBoxColumn.Width = 78;
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel5.Controls.Add(this.btnSearch, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.txtSearch, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 15);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(427, 40);
+            this.tableLayoutPanel5.TabIndex = 3;
             // 
-            // nameDataGridViewTextBoxColumn
+            // btnSearch
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSearch.Location = new System.Drawing.Point(323, 3);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(100, 34);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // venderIdDataGridViewTextBoxColumn
+            // txtSearch
             // 
-            this.venderIdDataGridViewTextBoxColumn.DataPropertyName = "VenderId";
-            this.venderIdDataGridViewTextBoxColumn.HeaderText = "VenderId";
-            this.venderIdDataGridViewTextBoxColumn.Name = "venderIdDataGridViewTextBoxColumn";
-            // 
-            // amountLeftDataGridViewTextBoxColumn
-            // 
-            this.amountLeftDataGridViewTextBoxColumn.DataPropertyName = "AmountLeft";
-            this.amountLeftDataGridViewTextBoxColumn.HeaderText = "AmountLeft";
-            this.amountLeftDataGridViewTextBoxColumn.Name = "amountLeftDataGridViewTextBoxColumn";
-            // 
-            // productTableBindingSource
-            // 
-            this.productTableBindingSource.DataMember = "ProductTable";
-            this.productTableBindingSource.DataSource = this.shohanPharmacyDataSet2;
-            // 
-            // shohanPharmacyDataSet2
-            // 
-            this.shohanPharmacyDataSet2.DataSetName = "ShohanPharmacyDataSet2";
-            this.shohanPharmacyDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.txtSearch.Location = new System.Drawing.Point(0, 0);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(317, 32);
+            this.txtSearch.TabIndex = 3;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // tableLayoutPanel3
             // 
@@ -401,20 +480,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1184, 561);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // shohanPharmacyDataSet
-            // 
-            this.shohanPharmacyDataSet.DataSetName = "ShohanPharmacyDataSet";
-            this.shohanPharmacyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // shohanPharmacyDataSetBindingSource
-            // 
-            this.shohanPharmacyDataSetBindingSource.DataSource = this.shohanPharmacyDataSet;
-            this.shohanPharmacyDataSetBindingSource.Position = 0;
-            // 
-            // productTableTableAdapter
-            // 
-            this.productTableTableAdapter.ClearBeforeFill = true;
-            // 
             // PurchaseNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,17 +495,14 @@
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
-            this.tableLayoutPanel8.ResumeLayout(false);
+            this.pnlUpdate.ResumeLayout(false);
+            this.pnlAdd.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSet2)).EndInit();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shohanPharmacyDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -457,24 +519,21 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Label lblError;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.TableLayoutPanel pnlAdd;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtVender;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataGridView dgvProduct;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.BindingSource shohanPharmacyDataSetBindingSource;
-        private ShohanPharmacyDataSet shohanPharmacyDataSet;
-        private ShohanPharmacyDataSet2 shohanPharmacyDataSet2;
-        private System.Windows.Forms.BindingSource productTableBindingSource;
-        private ShohanPharmacyDataSet2TableAdapters.ProductTableTableAdapter productTableTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn venderIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountLeftDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnVenderDetails;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.TableLayoutPanel pnlUpdate;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cbVender;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }

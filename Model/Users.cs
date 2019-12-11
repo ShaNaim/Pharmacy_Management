@@ -66,7 +66,7 @@ namespace ManageIT.MedShop.Model
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }

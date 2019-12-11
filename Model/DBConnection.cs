@@ -49,19 +49,26 @@ namespace ManageIT.MedShop.Model
         }
         public static int ExecuteQuery(string query)
         {
-            SqlConnection Connection = new SqlConnection(DBConnection.connectionString);
-            Connection.Open();
-            SqlCommand command = new SqlCommand(query, Connection);
-            int result = command.ExecuteNonQuery();
-            Connection.Close();
-            return result;
+            try
+            {
+                SqlConnection Connection = new SqlConnection(DBConnection.connectionString);
+                Connection.Open();
+                SqlCommand command = new SqlCommand(query, Connection);
+                int result = command.ExecuteNonQuery();
+                Connection.Close();
+                return result;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
         public static SqlDataReader getReader(string query)
         {
             SqlConnection con = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand(query, con);
             con.Open();
-            //SqlDataReader dataReader;
 
             return command.ExecuteReader();
         }
