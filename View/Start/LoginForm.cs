@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ManageIT.MedShop.Utility;
-using ManageIT.MedShop.Controller;
+﻿using ManageIT.MedShop.Controller;
 using ManageIT.MedShop.Model;
+using ManageIT.MedShop.Utility;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace ManageIT.MedShop.View.Start
 {
@@ -24,7 +18,7 @@ namespace ManageIT.MedShop.View.Start
 
 
         ///////////////////////////////// Custom Method /////////////////////////////////
-        
+
         private void clear()
         {
             txtPassword.Text = "";
@@ -46,7 +40,7 @@ namespace ManageIT.MedShop.View.Start
                 {
                     MessageBox.Show("Incorrect Password", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-             }
+            }
             catch (Exception)
             {
 
@@ -58,10 +52,10 @@ namespace ManageIT.MedShop.View.Start
 
         private void authenticateUser()
         {
-            if(authenticateInput())
+            if (authenticateInput())
             {
                 Login login = LoginController.authenticateUser(Int32.Parse(txtUserID.Text), txtPassword.Text);
-                if(login != null)
+                if (login != null)
                 {
                     if (login.UserStatus == (int)CodeUtility.UserStatus.Admin)
                     {
@@ -108,7 +102,7 @@ namespace ManageIT.MedShop.View.Start
 
         private void TxtUserName_TextChanged(object sender, EventArgs e)
         {
-            if(txtUserID.Text != "")
+            if (txtUserID.Text != "")
             {
                 lblError.Visible = false;
             }

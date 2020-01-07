@@ -64,4 +64,4 @@ D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\bin\Debug\ru\Micro
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\bin\Debug\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\bin\Debug\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\bin\Debug\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.csprojAssemblyReference.cache
+D:\ManageIT\Small_Pharmacy_Management_System\ManageIT.MedShop\obj\Debug\ManageIT.MedShop.View.Sells.BillingSystem.resources

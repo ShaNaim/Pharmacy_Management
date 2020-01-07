@@ -1,35 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace ManageIT.MedShop.Model
 {
     public static class DBConnection
     {
         public static string connectionString = "Data Source = DESKTOP-3PAI8AC;Initial Catalog = ShohanPharmacy; Integrated Security = True";
-        
-        /*private static SqlConnection _connection;
-        public static SqlConnection Connection
-        {
-            get
-            {
-                if (_connection == null)
-                    _connection = new SqlConnection(connectionString);
-                else if(_connection.State!=ConnectionState.Open)
-                {
-                    _connection.Open();
-                }
-                return _connection;
-            }
-
-        }*/
 
         //for select query
-        public static DataSet GetDataSet(string query,SqlConnection Connection)
+        public static DataSet GetDataSet(string query, SqlConnection Connection)
         {
             SqlCommand command = new SqlCommand(query, Connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
@@ -42,7 +22,7 @@ namespace ManageIT.MedShop.Model
         {
             SqlConnection Connection = new SqlConnection(DBConnection.connectionString);
             Connection.Open();
-            DataSet ds = GetDataSet(query,Connection);
+            DataSet ds = GetDataSet(query, Connection);
             if (ds.Tables.Count > 0)
                 return ds.Tables[0];
             return null;

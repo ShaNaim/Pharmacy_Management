@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using ManageIT.MedShop.Utility;
+using System;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ManageIT.MedShop.Utility;
 
 namespace ManageIT.MedShop.Model
 {
@@ -14,10 +9,10 @@ namespace ManageIT.MedShop.Model
         public int authenticateUser(Login user)
         {
             Login authenticateUser = getUser(user);
-             
-            if(authenticateUser != null)
+
+            if (authenticateUser != null)
             {
-                if(authenticateUser.UserId == user.UserId)
+                if (authenticateUser.UserId == user.UserId)
                 {
                     if (authenticateUser.UserPassword == user.UserPassword)
                     {
@@ -55,14 +50,14 @@ namespace ManageIT.MedShop.Model
             }
             return null;
         }
- 
+
         public void addUser(Login user)
         {
             string query = "insert into LoginTable(UserId,Password,Status) "
                     + "values('" + user.UserId + "','" + user.UserPassword + "','" + user.UserStatus + "')";
             try
             {
-               int row = DBConnection.ExecuteQuery(query);
+                int row = DBConnection.ExecuteQuery(query);
             }
             catch (Exception)
             {

@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 
 namespace ManageIT.MedShop.Model
@@ -16,7 +12,7 @@ namespace ManageIT.MedShop.Model
                     + "values('" + user.Id + "','" + user.Name + "','" + user.Contact + "','" + user.Salary + "','" + user.JoidDate + "')";
             try
             {
-                int row =DBConnection.ExecuteQuery(query);
+                int row = DBConnection.ExecuteQuery(query);
             }
             catch (Exception)
             {

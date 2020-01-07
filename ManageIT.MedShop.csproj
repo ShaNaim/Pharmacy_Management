@@ -100,11 +100,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BillingController.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\ProductController.cs" />
     <Compile Include="Controller\SearchController.cs" />
     <Compile Include="Controller\UsersController.cs" />
     <Compile Include="Controller\VenderController.cs" />
+    <Compile Include="Model\Billng.cs" />
     <Compile Include="Model\Purchase.cs" />
     <Compile Include="Model\Purchases.cs" />
     <Compile Include="Model\Quater.cs" />
@@ -121,21 +123,6 @@
     <Compile Include="Model\Logins.cs" />
     <Compile Include="Model\Vender.cs" />
     <Compile Include="Model\Venders.cs" />
-    <Compile Include="ShohanPharmacyDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShohanPharmacyDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ShohanPharmacyDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShohanPharmacyDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ShohanPharmacyDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShohanPharmacyDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Utility\CodeUtility.cs" />
     <Compile Include="View\Employee\AddNewEmploy.cs">
       <SubType>Form</SubType>
@@ -166,6 +153,12 @@
     </Compile>
     <Compile Include="View\Purchase\PurchaseNew.Designer.cs">
       <DependentUpon>PurchaseNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sells\BillingSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sells\BillingSystem.designer.cs">
+      <DependentUpon>BillingSystem.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Sells\SellsMain.cs">
       <SubType>Form</SubType>
@@ -215,6 +208,9 @@
     <EmbeddedResource Include="View\Purchase\PurchaseNew.resx">
       <DependentUpon>PurchaseNew.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Sells\BillingSystem.resx">
+      <DependentUpon>BillingSystem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Sells\SellsMain.resx">
       <DependentUpon>SellsMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,39 +246,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ShohanPharmacyDataSet.xsc">
-      <DependentUpon>ShohanPharmacyDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ShohanPharmacyDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ShohanPharmacyDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ShohanPharmacyDataSet.xss">
-      <DependentUpon>ShohanPharmacyDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ShohanPharmacyDataSet1.xsc">
-      <DependentUpon>ShohanPharmacyDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="ShohanPharmacyDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ShohanPharmacyDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ShohanPharmacyDataSet1.xss">
-      <DependentUpon>ShohanPharmacyDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="ShohanPharmacyDataSet2.xsc">
-      <DependentUpon>ShohanPharmacyDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="ShohanPharmacyDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ShohanPharmacyDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ShohanPharmacyDataSet2.xss">
-      <DependentUpon>ShohanPharmacyDataSet2.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ManageIT.MedShop.View.Start;
+﻿using ManageIT.MedShop.View.Sells;
 using ManageIT.MedShop.View.Purchase;
+using ManageIT.MedShop.View.Start;
+using System;
+using System.Windows.Forms;
 
 namespace ManageIT.MedShop
 {
@@ -18,7 +16,7 @@ namespace ManageIT.MedShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PurchaseNew());
+            Application.Run(new BillingSystem());
         }
     }
 }

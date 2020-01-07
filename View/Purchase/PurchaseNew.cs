@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using ManageIT.MedShop.Controller;
+using System;
 using System.Collections;
-using ManageIT.MedShop.Controller;
-using ManageIT.MedShop.Utility;
+using System.Windows.Forms;
 
 namespace ManageIT.MedShop.View.Purchase
 {
@@ -32,12 +24,18 @@ namespace ManageIT.MedShop.View.Purchase
             txtName.Text = "";
             txtTottal.Text = "";
             cbVender.Text = "";
-            dgvProduct.DataSource = getAllProduct();
-            dgvProduct.Refresh();
+            txtUnitPrice.Text = "";
+            fillDataGridView();
         }
-        private ArrayList  getAllProduct()
+        private ArrayList getAllProduct()
         {
-           return ProductController.getAllProduct();
+            return ProductController.getAllProduct();
+        }
+        private void fillDataGridView()
+        {
+            dgvProduct.DataSource = getAllProduct();
+            dgvProduct.Columns.Remove("vender");
+            dgvProduct.Refresh();
         }
         private void enableUpdate()
         {
@@ -62,9 +60,9 @@ namespace ManageIT.MedShop.View.Purchase
         }
         private bool checkInput()
         {
-            if(txtName.Text != "")
+            if (txtName.Text != "")
             {
-                if(cbVender.Text != "")
+                if (cbVender.Text != "")
                 {
                     return true;
                 }
@@ -80,8 +78,17 @@ namespace ManageIT.MedShop.View.Purchase
             txtID.Text = dgvProduct.Rows[e.RowIndex].Cells["ID"].Value.ToString();
             txtName.Text = dgvProduct.Rows[e.RowIndex].Cells["Name"].Value.ToString();
             txtTottal.Text = dgvProduct.Rows[e.RowIndex].Cells["AmountLeft"].Value.ToString();
-            cbVender.Text = VenderController.getVender(Int32.Parse(dgvProduct.Rows[e.RowIndex].Cells["VenderId"].Value.ToString())).Name.ToString();
-            
+            txtUnitPrice.Text = dgvProduct.Rows[e.RowIndex].Cells["UnitPrice"].Value.ToString();
+            try
+            {
+                cbVender.Text = ProductController.getProduct(Int32.Parse(dgvProduct.Rows[e.RowIndex].Cells["ID"].Value.ToString())).vender.Name.ToString();
+            }
+            catch (Exception)
+            {
+
+                cbVender.Text = "None";
+            }
+
             enableUpdate();
         }
         private void btnCancel_Click(object sender, EventArgs e)
@@ -114,16 +121,19 @@ namespace ManageIT.MedShop.View.Purchase
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(checkInput())
+            if (checkInput())
             {
-                if(MessageBox.Show("ADD " +txtName.Text,"ARE YOU SURE ?",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Exclamation)== System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show("ADD " + txtName.Text, "ARE YOU SURE ?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes)
                 {
                     int id = (int)Utility.CodeUtility.UserStatus.Helper; //Int32.Parse(txtID.Text);
                     string name = txtName.Text.Trim();
-                    string venderName =cbVender.Text;
+                    string venderName = cbVender.Text;
                     double tottal = Double.Parse(txtTottal.Text.Trim());
-                    ProductController.addProduct(id , name , venderName, tottal);
+                    double price = Double.Parse(txtUnitPrice.Text.Trim());
+                    ProductController.addProduct(id, name, venderName, tottal, price);
+
                     MessageBox.Show("PRODUCT ADDED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     init();
                 }
             }
@@ -134,7 +144,7 @@ namespace ManageIT.MedShop.View.Purchase
         }
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if(txtID.Text != "")
+            if (txtID.Text != "")
             {
                 if ((MessageBox.Show("DELETE " + txtName.Text, "ARE YOU SURE ?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes))
                 {
@@ -155,7 +165,9 @@ namespace ManageIT.MedShop.View.Purchase
                     string name = txtName.Text.Trim();
                     string venderName = cbVender.Text;
                     double tottal = Double.Parse(txtTottal.Text.Trim());
-                    ProductController.updateProduct(id, name, venderName, tottal);
+                    double price = Double.Parse(txtUnitPrice.Text.Trim());
+
+                    ProductController.updateProduct(id, name, tottal, price);
                     MessageBox.Show("Product Updated".ToUpper(), "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     init();
                 }

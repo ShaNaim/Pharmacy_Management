@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using ManageIT.MedShop.Controller;
 using ManageIT.MedShop.Utility;
-using ManageIT.MedShop.Controller;
+using System;
+using System.Windows.Forms;
 
 
 namespace ManageIT.MedShop.View.Employee
 {
     public partial class AddNewEmploy : Form
     {
-        private EmployInfo EmployInfo ;
+        private EmployInfo EmployInfo;
         public AddNewEmploy()
         {
             InitializeComponent();
@@ -23,7 +16,7 @@ namespace ManageIT.MedShop.View.Employee
         public AddNewEmploy(EmployInfo employInfo)
         {
             InitializeComponent();
-            this.EmployInfo = employInfo ;
+            this.EmployInfo = employInfo;
             txtID.Text = EmployInfo.txtID.Text;
             txtPassword.Text = EmployInfo.txtPassword.Text;
             txtContact.Text = EmployInfo.txtContact.Text;
@@ -35,7 +28,7 @@ namespace ManageIT.MedShop.View.Employee
         ///////////////////////////////// Custom Method /////////////////////////////////
         private bool CheckInsart()
         {
-            if(txtID.Text != "" && txtPassword.Text != "" && txtName.Text != "" && txtContact.Text != "" && txtSalary.Text != ""&&cbStatus.Text!="" )
+            if (txtID.Text != "" && txtPassword.Text != "" && txtName.Text != "" && txtContact.Text != "" && txtSalary.Text != "" && cbStatus.Text != "")
             {
                 return true;
             }
@@ -54,19 +47,19 @@ namespace ManageIT.MedShop.View.Employee
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             string msgString = "ADD" + txtName.Text + " ?";
-            if(CheckInsart())
+            if (CheckInsart())
             {
                 DialogResult dr = MessageBox.Show(msgString, "Are You Sure ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if(dr == System.Windows.Forms.DialogResult.Yes)
+                if (dr == System.Windows.Forms.DialogResult.Yes)
                 {
-                    UsersController.addUser(Int32.Parse(txtID.Text),txtName.Text,Int32.Parse(txtContact.Text),float.Parse(txtSalary.Text),dtpJoinDate.Value);
+                    UsersController.addUser(Int32.Parse(txtID.Text), txtName.Text, Int32.Parse(txtContact.Text), float.Parse(txtSalary.Text), dtpJoinDate.Value);
                     int status = 2;
-                    if(cbStatus.SelectedIndex == 0)
+                    if (cbStatus.SelectedIndex == 0)
                     {
                         status = 1;
                     }
-                    LoginController.addUser(Int32.Parse(txtID.Text),txtPassword.Text, status);
-                    MessageBox.Show(txtID.Text + "ADDED", "Success", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    LoginController.addUser(Int32.Parse(txtID.Text), txtPassword.Text, status);
+                    MessageBox.Show(txtID.Text + "ADDED", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else

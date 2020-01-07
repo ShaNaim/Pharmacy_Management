@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using ManageIT.MedShop.Controller;
+using System;
 using System.Collections;
-using ManageIT.MedShop.Controller;
+using System.Windows.Forms;
 
 namespace ManageIT.MedShop.View.Purchase
 {
@@ -42,10 +35,10 @@ namespace ManageIT.MedShop.View.Purchase
         }
         private void txtSearchMed_TextChanged(object sender, EventArgs e)
         {
-            if(txtSearchMed.Text != "")
+            if (txtSearchMed.Text != "")
             {
                 ArrayList dataSource = searchProduct(txtSearchMed.Text.Trim());
-                if(dataSource != null)
+                if (dataSource != null)
                 {
                     dgvSearchView.DataSource = dataSource;
                     try
@@ -54,7 +47,7 @@ namespace ManageIT.MedShop.View.Purchase
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("No Item Found", "NOT FOUND", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("No Item Found", "NOT FOUND", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }

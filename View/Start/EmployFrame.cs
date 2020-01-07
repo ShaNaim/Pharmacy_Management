@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using ManageIT.MedShop.View.Employee;
 using ManageIT.MedShop.View.Purchase;
-using ManageIT.MedShop.View.Employee; 
+using ManageIT.MedShop.View.Sells;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace ManageIT.MedShop.View.Start
 {
@@ -18,7 +13,8 @@ namespace ManageIT.MedShop.View.Start
         {
             InitializeComponent();
             lblCopyRight.Text = Utility.FramesUtility.CopyRightText;
-            lblUserName.Text = "Welcome : " + userName ;
+            lblUserName.Text = "Welcome : " + userName;
+            loadBilling();
         }
 
         ///////////////////////////////// Custom Method /////////////////////////////////
@@ -49,6 +45,20 @@ namespace ManageIT.MedShop.View.Start
             this.pnlDisplay.Controls.Add(purchaseNew);
 
             purchaseNew.Show();
+        }
+        private void loadBilling()
+        {
+            BillingSystem billingMain = new BillingSystem();
+
+            billingMain.TopLevel = false;
+            billingMain.AutoScroll = true;
+            billingMain.FormBorderStyle = FormBorderStyle.None;
+            billingMain.Dock = DockStyle.Fill;
+
+            this.pnlDisplay.Controls.Clear();
+            this.pnlDisplay.Controls.Add(billingMain);
+
+            billingMain.Show();
         }
 
         private void LoadSetting()

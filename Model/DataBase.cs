@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ManageIT.MedShop.Model
+﻿namespace ManageIT.MedShop.Model
 {
     class DataBase
     {
@@ -14,7 +8,7 @@ namespace ManageIT.MedShop.Model
         public Venders Venders { get; set; }
         public Sells Sells { get; set; }
         public Quaters Quaters { get; set; }
-        public Purchases Purchases{ get; set; }
+        public Purchases Purchases { get; set; }
         public DataBase()
         {
             Logins = new Logins();

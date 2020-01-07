@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ManageIT.MedShop.Utility
@@ -10,9 +6,9 @@ namespace ManageIT.MedShop.Utility
     public static class FramesUtility
     {
         public static string CopyRightText = "    ManageIT";
-        public static void FocusOn(TextBox focusBox , KeyPressEventArgs key)
+        public static void FocusOn(TextBox focusBox, KeyPressEventArgs key)
         {
-            if(key.KeyChar.Equals((Char)Keys.Enter))
+            if (key.KeyChar.Equals((Char)Keys.Enter))
             {
                 focusBox.Focus();
             }
